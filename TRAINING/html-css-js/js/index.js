@@ -1,5 +1,8 @@
 // DEFAULTS
 'use strict';
 
-var userAge = 18;
-console.log('user age:', userAge);
+var name = 'Nick';
+console.log('Hello ' + name);
+if (name.length > 7) {
+    console.log('Wow, you have a REALLY long name!');
+}
