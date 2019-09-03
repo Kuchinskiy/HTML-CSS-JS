@@ -30,27 +30,14 @@
 
 // PRACTICE (page 120, part A )
 
-// var name = 'Harry';
+// const name = 'Harry';
 
-// var isNotMyName = 'Nick';
-// console.log(isNotMyName === name);
-
-// var myNameIs = 'Harry';
-// console.log(myNameIs === name);
-
-// var isNotName = 'Dave';
-// console.log(isNotName === name);
-
-
-// if (isNotMyName === name) {
-//     console.log('Hi');
-// } else if (isNotName === name) {
-//     console.log('Hello');
-// } else if (isNotMyName === name) {
+// if (name === 'Harry') {
 //     console.log('Hello me!');
 // } else {
 //     console.log('Hello stranger');
 // }
+
 /*=====================================================================*/
 
 /*+++++++++++++++++++++++ ARRAY && METHOD +++++++++++++++++++++++++++++*/
@@ -139,3 +126,52 @@
 
 // console.log('total :', total);
 
+// ===================================================================================
+
+/*ДЕСТРУКТУРИЗАЦИЯ / DESTRUCTURING ASSIGNMENT / и операторы REST & SPREAD */
+
+// !!!--Деструктуризация - это ОСОБЫЙ СИНТАКСИС ПРИСВАИВАНИЯ--!!!
+// При котором можно присвоить МАССИВ или ОБЪЕКТ сразу же нескольким переменным,
+// разбив его на части;
+
+// let [age, height, grade] = [12,78,45];
+
+// console.log(age); // 12
+// console.log(height); // 78
+// console.log(grade); // 45
+
+/*Поменять местами значения НЕ ПРИБЕГАЯ к использованию третьей переменной*/
+
+// let a = 13;
+// let d = 17;
+// [a, d] = [d, a];
+
+// console.log(a, d); // 17 13
+
+// Поместим в переменную !!!{объект}!!! для деструктуризации
+const destructObj = { name: 'Player1', x: 50, y: 44 };
+
+// Поставив фигурные скобки {} ,сразу после переменной  МЫ СИГНАЛИЗИРУЕМ что 
+// РАЗБИРАЕМ ОБЪЕКТ который указываем в правой части выражения
+const {} = destructObj;
+
+// Но, можно и сразу поместить ОБЪЕКТ за " = " и все будет тоже само и более
+// упростит работу разроботчику
+// const {name, x, y} = { name: 'Player1', x: 50, y: 44 };
+
+// console.log(name, x, y); // Player1 50 44
+
+/*----- REST && SPREAD OPERATOR  (...) --*/
+
+
+// В зависимости от контекста использования оператор (...) называют по разному,
+// ...rest || ...spread
+// !!!--REST - объединяет набор значений в один массив 
+// !!!--SPREAD - разбивает(распыляет, распаковывает) на индивидуальные элементы
+
+// const numbers = [1, 4, 8, 90];
+// const letters = ['a', 'h', 'k', 'y', 'p'];
+
+// const concat = [...numbers, ...letters];
+
+// console.log(concat);
