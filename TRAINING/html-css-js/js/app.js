@@ -78,8 +78,8 @@ const name = 'Colt';
 
 // Сложение с заменной:
 
-let value = 30;
-value -= 10;
+// let value = 30;
+// value -= 10;
 
 // console.log('value :', value);
 
@@ -89,9 +89,9 @@ value -= 10;
 // Используются для сравнения значений. 
 // Результатом своего выполнения возвращают БУЛЬ, true или false.
 
-const x = 5;
-const y = 10;
-const z = 5;
+// const x = 5;
+// const y = 10;
+// const z = 5;
 
 // console.log('x > y:', x > y); // false
 // console.log('x < y:', x < y); // true
@@ -114,12 +114,12 @@ const z = 5;
 // Если значние не возможно привести к числу, 
 // !!!--результатом будет специальное значение NaN (Not a Number)--!!!
 
-const valueA = '7';
+// const valueA = '7';
 
 // console.log(Number(valueA));
 // console.log(typeof Number(valueA));
 
-const valueD = 'string random';
+// const valueD = 'string random';
 
 // console.log(Number(valueD));
 // console.log(typeof Number(valueD));
@@ -143,12 +143,12 @@ const valueD = 'string random';
 // Этот метод отвечает на вопрос "Это Not A Number?", и возвращает БУЛЬ:
 //  true || false;
 
-const validNumber = Number('77');
+// const validNumber = Number('77');
 
 // console.log(Number.isNaN(validNumber));
 
 
-const invalidNumber = Number('remember');
+// const invalidNumber = Number('remember');
 
 // console.log(Number.isNaN(invalidNumber));
 
@@ -186,7 +186,7 @@ const invalidNumber = Number('remember');
 
 // !!!--String — это индексированный набор из нуля или более символов, заключенных в одинарные либо двойные кавычки.
 
-const message = 'Welcome to hell';
+// const message = 'Welcome to hell';
 
 // console.log('length :', message.length); // 15;
 // console.log(message.indexOf('hell')); // 11;
@@ -196,9 +196,9 @@ const message = 'Welcome to hell';
 /*==================================================================================================================*/
 // ЛОГИЧЕСКИЕ ОПЕРАТОРЫ
 /*-----*&& И---*/
-const num = 40;
+// const num = 40;
 
-const result = num > 20 && num > 50;
+// const result = num > 20 && num > 50;
 // console.log(result); // false
 
 // Для того чтобы оператор && вернул true, требуется чтобы все операнды были истинными (truthy). 
@@ -208,9 +208,9 @@ const result = num > 20 && num > 50;
 // До первого 'false' && (этот операнд не вычисляется)
 
 /*-----*|| ИЛИ---*/
-const number = 77;
+// const number = 77;
 
-const results = number > 69 || number < 103;
+// const results = number > 69 || number < 103;
 // console.log(results); // true
 
 // Оператор || возвращает одно из значений (операндов);
@@ -218,4 +218,132 @@ const results = number > 69 || number < 103;
 // !!!--Если ни одно из условий не выполняется, получаем false.
 
 //  До первого 'true' || (этот операнд не вычисляется)
+
+/*===================================================================================*/
+// ЦИКЛЫ
+// !!!--(-----* CYCLE--)
+
+// Для многократного повторения одного участка кода, используются ЦИКЛЫ(исполнения набора инструкций);
+// Последовательность инструкций и их выполнение - это ТЕЛО ЦИКЛА;
+// Выполнение инструкций ТЕЛА ЦИКЛА(единичное) - это ИТЕРАЦИЯ;
+// Переменная, хранящая текущий номер итерации - это СЧЕТЧИК;
+// Цикл не обязательно содержит счётчик, и он не обязан быть один;
+
+/*
+
+-- for (statement/заявление) -
+-- do...while (statement) -
+-- while (statement) -
+-- labeled (statement) -
+-- break (statement) -
+-- continue (statement) - 
+-- for...in (statement) -
+-- for...of (statement) -
+
+*/
+
+// while (expression) {
+  // код, тело цикла (statement)
+// }
+// !!!-- Это условие проверяется до выполнения тела цикла--!!!
+// Поэтому тело может быть не выполнено ни разу, 
+// если условие с самого начала ложно.
+
+// let x = 0;
+// let n = 0;
+
+// while (n < 3) {
+//   n++;
+//   x += n;
+
+//   const table = { n, x, 'sum': n + x };
+//   console.table(table); // выводим в таблицу ИТЕРАЦИИ после выполнения инструкции ТЕЛА ЦИКЛА;
+// }
+// console.log(n, x); // 3, 6;
+
+// ==================================================================================================
+
+// (-----* do...while---)
+
+// let password = '';
+
+// do {
+//   alert(password.length);
+//   password = prompt('Введите пароль длиннее 4-х символов', '');
+// } while (password.length < 5);
+
+// console.log('Ввели пароль: ', password);
+
+// ========================================================================================
+
+// (-----* for --)
+
+// const max = 10;
+
+// for (let i = 0; i < max; i += 1) {
+//   console.log(i);
+// }
+
+// ====================================================================
+
+/*Посчитаем сумму чисел до определенного значения*/
+
+// const target = 3;
+// let sum = 0;
+
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+
+//   alert(i);
+
+//     const table = { target, sum };
+//   console.table(table);
+
+// }
+
+// console.log(sum); // 6 ( sum = 3 + 3 )
+
+// =====================================================================================
+
+// Прерывание цикла: «break»  &&  «continue»
+
+// Выйти из цикла можно не только при проверке условия, но и вообще в любой момент,
+// с помощью специальной директивы(инсрукции) " break ".
+
+// let sum = 0;
+
+// while (true) {
+
+//   let value = +prompt("Введите число", '');
+
+//   if (!value) break; // (*)
+
+//   sum += value;
+
+// }
+// alert( 'Сумма: ' + sum );
+
+
+/*-----* CONTINUE --*/
+
+// Директива  "continue"  прерывает не весь цикл, а только выполнение текущей итерации;
+// И,позволяет сделать переход к следующей итерации;
+
+/*
+ * Используем цикл для вывода только нечетных чисел.
+ * Для чётных "i" срабатывает "continue", выполнение тела прекращается
+ * и управление передаётся на следующую итерацию.
+*/
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 !== 0) {
+//     continue;
+//   }
+
+//   console.log('Нечетное i: ', i); // 1, 3, 5, 7, 9
+// }
+
+
 
