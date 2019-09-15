@@ -274,6 +274,47 @@ const name = 'Colt';
 
 // console.log('Ввели пароль: ', password);
 
+/*==============================================================================================*/
+
+// (-----* ALEXANDR REPETA ---) --- (-----* do... while---)
+
+/*
+!- Правильное построение алгоритма при работе с ЦИКЛОМ "do ... while" ;
+?- Как правило этот цикл необходим для взаимодействия с пользователем или написания
+игры (например: крестики/нолики);
+*/
+
+// let userInput;
+
+// do {
+//   userInput = prompt('Введите необходимое число от 1 до 10 !');
+
+// ЦИКЛ продолжается пока условие --> true, поэтому их необходимо составлять,
+// так чтобы нам возвращался 'false' тогда можно будет выйти из цикла;
+// Выполняем 'до тех пор пока'  не равно null  и  не равно 10;
+
+// } while (userInput !== null && Number(userInput) !== 10);
+
+
+// Пишем условие ВЫПОЛНЕНИЯ
+
+//  userInput = null
+// null !== null || Number(null) !== 10
+// false || true --> true
+
+//  userInput = 10
+// null !== null || Number(null) !== 10
+// true || false --> true
+
+//  userInput = null
+// null !== null && Number(null) !== 10
+// false && true --> false
+
+//  userInput = 10
+// 10 !== null && Number(10) !== 10
+// true && false --> false
+
+
 // ========================================================================================
 
 // (-----* for --)
@@ -283,6 +324,58 @@ const name = 'Colt';
 // for (let i = 0; i < max; i += 1) {
 //   console.log(i);
 // }
+
+
+// (-----* ALEXANDR REPETA ---)
+
+
+/*Перебор массива с помощью цикла*/
+
+// const products = ['apple', 'grape', 'banana', 'orange'];
+
+// for (let j = 0; j < products.length; j += 1) {
+//   console.log('j :', j);
+//   console.log(`products[${j}] :`, products[j]);
+// }
+
+// !-(-----* for... of --) больше для перебора массива,
+// ? НО не для того чтобы его изменять!!!
+// ? так как он возвращает по ЗНАЧЕНИЮ(дел.копия), а не по ССЫЛКЕ!!!
+
+// for (const product of products) {
+//   console.log(product);
+// }
+
+// Для перебора массива и его ИЗМЕНЕНИЕМ идеально подходить (-----* for --) 
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// for (let j = 0; j < numbers.length; j += 1) {
+//   console.log('j :', j);
+//   console.log(`numbers[${j}] :`, numbers[j]);
+
+//   numbers[j] = numbers[j] * 2;
+// }
+
+// console.log(numbers); // [2, 4, 6, 8, 10]
+
+//!- Создаем ЦИКЛ в ЦИКЛЕ при работе с многомерными массивами (МАТРИЦА):
+
+// const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+// for (let i = 0; i < matrix.length; i += 1) {
+//   console.group(`Iteration ${i}`);// для удобства читаемости(${i} - метка)
+
+//   console.log('i :', i);
+//   console.log(`matrix[${i}] :`, matrix[i]);
+
+// for (let j = 0; j < matrix[i].length; j += 1) {
+//   console.log('j :', j);
+//   console.log(`matrix[${i}][${j}] :`, matrix[i][j]);
+//   }
+//   console.groupEnd(`Iteration ${i}`);// (${i} - метка должна быть одинаковой [begin/ end])
+// }
+
 
 // ====================================================================
 
