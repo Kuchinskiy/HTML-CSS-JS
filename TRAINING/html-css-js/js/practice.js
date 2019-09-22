@@ -197,20 +197,85 @@
  * первого числа как множителя, но без выполнения вычеслений(умножения)
 */
 
-const addNumber = function () {
+// const addNumber = function () {
     // const args =Array.from(arguments);
     // или
-    let args =Array.from(arguments);
+    // let args =Array.from(arguments);
 
-   console.log(args);
-   const mult = args[0];
+//    console.log(args);
+//    const mult = args[0];
 //    args.shift();
    // или 
-    args = args.slice(1);
+//     args = args.slice(1);
 
-   console.log(args);
-}
+//    console.log(args);
+// }
 
-console.log(addNumber(7, 1, 2, 2)); // 5
-console.log(addNumber(10, 1, 2, 3, 4, 5)); // 15
-console.log(addNumber(15, 1, 2, 3, 7, 8, 9));
+// console.log(addNumber(7, 1, 2, 2));
+// console.log(addNumber(10, 1, 2, 3, 4, 5));
+// console.log(addNumber(15, 1, 2, 3, 7, 8, 9));
+
+/*====================================================================================*/
+
+// Проверка множественных условий с использованием includes()
+
+// const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+// const fruit = 'cherry';
+
+// if (redFruits.includes(fruit)) {
+//     console.log('It is a red fruit');
+// }
+
+/*=====================================================================================*/
+
+// Предположим, у нас есть массив оценок, который содержит пять чисел от 1 до 5.
+// const scores = [1, 2, 3, 4, 5];
+// console.log(scores);
+
+// Следующая операция удаляет три элемента массива,
+// начиная с первого элемента (индекс 0).
+// const deletedScores = scores.splice(0, 3);
+
+
+// Теперь массив scores содержит два элемента.
+// console.log(scores); // [4, 5]
+
+
+// А массив deletedScores содержит три удаленных элемента.
+// console.log(deletedScores); // [1, 2, 3]
+
+/*===================================================================================*/
+
+// Вставка элементов в массив
+// Предположим, что у вас есть массив с названиями цветов в виде строк.
+// const colors = ['red', 'green', 'blue'];
+
+// Следующая операция помещает один новый элемент перед вторым элементом.
+// colors.splice(2, 0, 'purple'); // вставка !!!'перед'!!! 2 position(позицией элемента)
+
+// Вы можете вставить более одного элемента, передав четвертый, пятый аргумент и т. д.
+// colors.splice(1, 0, 'yellow', 'pink'); // вставка !!!'перед'!!! 1 position(позицией элемента)
+
+// Теперь массив цветов содержит новые элементы:
+// console.log(colors);
+
+/*==========================================================================================*/
+
+// Замена элементов массива
+// Предположим, у вас есть массив языков программирования из четырех элементов.
+const languages = ['C', 'C++', 'Java', 'JavaScript'];
+
+// Следующая операция заменяет второй элемент на новый.
+languages.splice(1, 1, 'Python');
+
+// В массиве языков теперь все еще четыре элемента,
+// но второй элемент теперь «Python» вместо «C++».
+console.log(languages); // ["C", "Python", "Java", "JavaScript"]
+
+// Вы можете заменить один элемент на несколько элементов,
+// передав больше аргументов
+// languages.splice(2, 1, 'C#', 'Swift', 'Go');
+
+// console.log(languages);
+// ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
+
