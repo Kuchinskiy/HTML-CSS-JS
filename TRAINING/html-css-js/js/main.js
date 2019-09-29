@@ -194,7 +194,7 @@
 // }
 
 // !!! Number - <<<-- это ОБЪЕКТ, который представляет число любого вида !!! //
-// ?!? Все числа Java Scriptявляются 64-битными числами с плавающей точкой ?!? //
+// ?!? Все числа JavaScript являются 64-битными числами с плавающей точкой ?!? //
 
 // ------------------------------------------------------------------------------------------------------------
 
@@ -400,7 +400,7 @@
 * Формат сообщения:  'Доставка в [страна] будет стоить [цена] кредитов';
 
 * Но доставка есть не везде, если указанной страны нет в списке, то выводи в сообщение:
-* 'В вашу страну доставка не доступна' и 'Введите название маленькими буквами';
+* 'В вашу страну доставка не доступна';
 
 * Ниже приведен список стран и стоимость доставки:
 
@@ -413,58 +413,70 @@
 * PS: используй switch
 */
 
-const deliveryInChina = "китай";
-const deliveryInUsa = "америка";
-const deliveryInAustralia = "австралия";
-const deliveryInIndia = "индия";
-const deliveryInJamaica = "ямайка";
+// const deliveryInChina = "китай";
+// const deliveryInUsa = "америка";
+// const deliveryInAustralia = "австралия";
+// const deliveryInIndia = "индия";
+// const deliveryInJamaica = "ямайка";
 
-const costInChina = 100;
-const costInUsa = 250;
-const costInAustralia = 170;
-const costInIndia = 80;
-const costInJamaica = 120;
+// const costInChina = 100;
+// const costInUsa = 250;
+// const costInAustralia = 170;
+// const costInIndia = 80;
+// const costInJamaica = 120;
 
-const deliveryCountry = prompt("Укажите вашу страну для доставки :");
+// const deliveryCountry = prompt("Укажите вашу страну для доставки :");
 
-if (deliveryCountry === null) {
-  alert("Надеемся следующий раз,Вы сделаете выбор!");
-}
+// if (deliveryCountry === null) {
+//     alert("Надеемся следующий раз,Вы сделаете выбор!");
+//   };
+// switch (deliveryCountry) {
+//   case deliveryInChina:
+//     alert(
+//       `Доставка в ${deliveryInChina[0].toUpperCase() +
+//         deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов`
+//     );
+//     break;
+//   case deliveryInUsa:
+//     alert(
+//       `Доставка в ${deliveryInUsa[0].toUpperCase() +
+//         deliveryInUsa.slice(1)} будет стоить ${costInUsa} кредитов`
+//     );
+//     break;
+//   case deliveryInAustralia:
+//     alert(
+//       `Доставка в ${deliveryInAustralia[0].toUpperCase() +
+//         deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов`
+//     );
+//     break;
+//   case deliveryInIndia:
+//     alert(
+//       `Доставка в ${deliveryInIndia[0].toUpperCase() +
+//         deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов`
+//     );
+//     break;
+//   case deliveryInJamaica:
+//     alert(
+//       `Доставка в ${deliveryInJamaica[0].toUpperCase() +
+//         deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов`
+//     );
+//     break;
 
-switch (deliveryCountry) {
-  case deliveryInChina:
-    alert(
-      `Доставка в ${deliveryInChina[0].toUpperCase() +
-        deliveryInChina.slice(1)} будет стоить ${costInChina} кредитов`
-    );
-    break;
-  case deliveryInUsa:
-    alert(
-      `Доставка в ${deliveryInUsa[0].toUpperCase() +
-        deliveryInUsa.slice(1)} будет стоить ${costInUsa} кредитов`
-    );
-    break;
-  case deliveryInAustralia:
-    alert(
-      `Доставка в ${deliveryInAustralia[0].toUpperCase() +
-        deliveryInAustralia.slice(1)} будет стоить ${costInAustralia} кредитов`
-    );
-    break;
-  case deliveryInIndia:
-    alert(
-      `Доставка в ${deliveryInIndia[0].toUpperCase() +
-        deliveryInIndia.slice(1)} будет стоить ${costInIndia} кредитов`
-    );
-    break;
-  case deliveryInJamaica:
-    alert(
-      `Доставка в ${deliveryInJamaica[0].toUpperCase() +
-        deliveryInJamaica.slice(1)} будет стоить ${costInJamaica} кредитов`
-    );
-    break;
+//   default:
+//     alert("В вашу страну доставка не доступна");
+//     break;
+//   };
 
-  default:
-    alert("В вашу страну доставка не доступна");
-    alert("Введите название МАЛЕНЬКИМИ БУКВАМИ");
-    break;
-};
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Проверка на правильность ввода в поле для текста (не по заданию) :
+
+// const text = "кИтАй";
+// const checkLetters = text.slice(1);
+// const checkFor = text.slice(1).toLowerCase();
+
+// if (checkLetters !== checkFor) {
+//    console.log('Введите правильное название страны!');
+// }
+
+// -------------------------------------------------------------------------------------------------------
