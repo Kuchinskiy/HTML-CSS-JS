@@ -741,19 +741,17 @@
 /*
  * const adminLogin = 'admin';
  * const adminPassword = 'm4ngo1zh4ackz0r';
-*/
+ */
 
 /*=============================================================================================*/
 
 // const adminLogin = "admin";
 // const adminPassword = "m4ngo1zh4ackz0r";
 
-
 // const userRefused = "Отменено пользователем !";
 // const invalidLogin = "Доступ запрещен, неверный логин !";
 // const invalidPassword = "Доступ запрещен, неверный пароль !";
 // const validPassword = "Добро пожаловать !";
-
 
 // const login = prompt("Введите пожалуйста логин :");
 
@@ -771,3 +769,60 @@
 //     alert(validPassword);
 //   }
 // };
+
+// --------------------------------------------------------------------------------------------------
+
+// Как на самом деле работает движок JavaScript:
+
+// let a = 3
+// function addTwo(x) {
+//    let ret = x + 2
+//    return ret
+//  }
+//  let b = addTwo(a);
+//  console.log(b);
+
+// ---------------------------------------------------------------------------------------------------
+
+// module-02-task01 -->> campOffline#23
+
+/*
+* Напиши функцию logItems(array), которая получает массив и использует цикл for,
+* который для каждого элемента массива будет выводить в консоль
+* сообщение в формате [номер элемента] - [значение элемента].
+
+* Нумерация должна начинаться с 1. К примеру для первого элемента массива
+* ['Mango', 'Poly', 'Ajax'] с индексом
+* 0 будет выведено '1 - Mango', а для индекса 2 выведет '3 - Ajax'.
+
+* Вызовы функции для проверки работоспособности твоей реализации:
+
+* -->>-- logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+* -->>-- logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+*/
+
+// -->> function expression
+
+// const logItems = function(array) {
+//   let num = 1;
+//   const users = ["Mango", "Poly", "Ajax", "Lux", "Jay", "Kong"];
+//   for (let j = 0; j < users.length; j++) {
+//     console.log(`${num} - ${users[j]}`);
+//     num += 1;
+//   }
+//   return array;
+// };
+// logItems();
+
+
+// -->> function declaration
+
+// function logItems(array) {
+//     for (let j = 0; j < array.length; j++) {
+//         console.log(`${j + 1} - ${array[j]}`);
+//     }
+// }
+// logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+// logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+// ---------------------------------------------------------------------------------------------------
