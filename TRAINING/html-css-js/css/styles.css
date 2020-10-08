@@ -1,9 +1,9 @@
 /* DEFAULTS */
 
 *{
-    outline: 1px solid red;
-    /* margin: 0; */
-    /* padding: 0; */
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -45,6 +45,47 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+/* MODULE-03 Additional Tasks */
+/* Header WEB Navigation Menu */
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
 
+.main-header {
+    background-color: #3a3e64;
+}
+
+.nav-list-item {
+    padding: 45px 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:700;
+}
+
+.nav-list-item .menu-item:not(:last-child) {
+    margin-right: 70px;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-item .menu-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.menu-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    color: #000000;
+}
 
 
