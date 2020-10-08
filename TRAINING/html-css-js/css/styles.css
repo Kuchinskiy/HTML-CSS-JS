@@ -1,8 +1,8 @@
 /* DEFAULTS */
 
 *{
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
 }
 
 .visually-hidden:not(:focus):not(:active),
