@@ -93,4 +93,17 @@ body {
 
 /* MODULE-03 Additional Tasks-2 */
 /* Article with IMAGE */
+.wrap {
+    width: 470px;
+    margin: 0 auto;
+}
 
+.page-article {
+    padding: 15px;
+    border: 1px solid #808080;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.image-article {
+    width: 100%;
+}
