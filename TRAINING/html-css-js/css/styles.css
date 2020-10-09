@@ -56,8 +56,11 @@ body {
     background-color: #3a3e64;
 }
 
+.page-nav {
+    padding: 38px 0;
+}
+
 .nav-list-item {
-    padding: 45px 0;
     list-style: none;
     text-align: center;
     font-size: 18px;
@@ -65,10 +68,11 @@ body {
 }
 
 .nav-list-item .menu-item:not(:last-child) {
-    margin-right: 70px;
+    margin-right: 20px;
 }
 
 .menu-item {
+    padding: 20px 48px;
     display: inline-block;
 }
 
@@ -80,11 +84,10 @@ body {
 
 .menu-link {
     display: inline-block;
-    vertical-align: middle;
 }
 
-.menu-link:hover,
-.menu-link:focus {
+.menu-item:hover .menu-link,
+.menu-item:focus .menu-link {
     color: #000000;
 }
 
