@@ -47,7 +47,7 @@ body {
 
 /* MODULE-03 Additional Tasks-1 */
 /* Header - Navigation - Menu */
-.wrapper {
+.wrapperA {
     width: 1200px;
     margin: 0 auto;
 }
@@ -93,7 +93,7 @@ body {
 
 /* MODULE-03 Additional Tasks-2 */
 /* Article with IMAGE */
-.wrap {
+.wrapperB {
     width: 470px;
     margin: 0 auto;
 }
@@ -106,4 +106,24 @@ body {
 
 .image-article {
     width: 100%;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #cebdbd;
+}
+
+.main-title {
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #918282;
+    font-size: 30px;
+}
+
+.article {
+    color: #928484;
+    text-align: justify;
+    margin-bottom: 10px;
 }
