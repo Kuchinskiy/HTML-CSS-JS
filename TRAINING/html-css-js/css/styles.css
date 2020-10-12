@@ -128,3 +128,8 @@ body {
     text-align: justify;
     margin-bottom: 21px;
 }
+
+.wrapperC {
+    width: 960px;
+    margin: 0 auto;
+}
