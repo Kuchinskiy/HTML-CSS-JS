@@ -1,7 +1,7 @@
 /* DEFAULTS */
 
 *{
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     margin: 0;
     padding: 0;
 }
@@ -112,6 +112,7 @@ body {
 }
 
 .subtitle {
+    font-size: 16px;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #cebdbd;
@@ -125,6 +126,7 @@ body {
 }
 
 .article {
+    font-size: 14px;
     color: #928484;
     text-align: justify;
     margin-bottom: 21px;
@@ -135,12 +137,16 @@ body {
 .wrapperC {
     width: 960px;
     margin: 0 auto;
+    font-size: 0;
 }
 
 .section-one {
-    margin: 0;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 20px;
 }
 
 .section-two {
-    margin: 0;
+    display: inline-block;
+    padding: 20px;
 }
