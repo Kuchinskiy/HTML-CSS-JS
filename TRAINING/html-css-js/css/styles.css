@@ -84,7 +84,7 @@ body {
 }
 
 .menu-link {
-    display: inline-block;
+    display: block;
 }
 
 .menu-item:hover .menu-link,
@@ -155,6 +155,7 @@ body {
 
 /* Footer */
 .page-footer {
+    width: 100%;
     background-color: #3a3e64;
     padding: 38px 0;
 }
