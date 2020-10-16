@@ -153,7 +153,7 @@ body {
     padding: 35px;
 }
 
-/* Footer */
+/* Footer for Article-Page-Images */
 .page-footer {
     width: 100%;
     background-color: #3a3e64;
@@ -174,17 +174,17 @@ body {
 }
 
 
-/* box-shadow the effect */
+/* Box-Shadow the effect - PRACTICE */
 .outer-box {
     width: 800px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
 }
 
 .box {
     width: 250px;
     height: 30px;
-    margin-left: 100px;
+    margin: 70px;
     display: inline-block;
     border-radius: 10px;
     vertical-align: top;
