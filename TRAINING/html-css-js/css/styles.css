@@ -218,20 +218,19 @@ body {
     width: 800px;
     height: 450px;
     margin: 0 auto;
-    margin-top: 10px;
     box-shadow: 2px 2px 5px 5px rgba(0%, 0%, 0%, 0.5);
     background: 
     linear-gradient(180deg, 
     rgba(0%, 0%, 0%, 0),
-    rgba(0%, 0%, 0%, 0.3)60%,
+    rgba(0%, 0%, 0%, 0.3)30%,
     rgba(0%, 0%, 0%, 0.9)),
     url(/TRAINING/html-css-js/image/pexels-dolphins.jpg);
     background-size: cover;
+    transition: all .5s linear;
 }
 
 .box-shadow-img:hover {
     background: url(/TRAINING//html-css-js/image/pexels-dolphins.jpg);
     background-size: cover;
     transform: scale(1.15);
-    transition: all .5s linear;
 }
