@@ -229,6 +229,7 @@ body {
     background-size: cover;
 }
 
-.box-shadow-img {
-    
+.box-shadow-img:hover {
+    background: url(/TRAINING//html-css-js/image/pexels-dolphins.jpg);
+    background-size: cover;
 }
