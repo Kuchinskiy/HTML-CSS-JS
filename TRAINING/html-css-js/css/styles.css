@@ -211,3 +211,15 @@ body {
     175px -20px 0 rgb(48%, 30%, 45%),
     210px 10px 0 rgb(120%, 60%, 50%);
 }
+
+
+/* Box-Shadow with Linear-Gradient - IMAGE */
+.box-shadow-img {
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 10px;
+    box-shadow: 2px 2px 5px 5px rgba(0%, 0%, 0%, 0.5);
+    background: linear-gradient(180deg, rgba(0%, 0%, 0%, 0), rgba(0%, 0%, 0%, 0.3)60%, rgba(0%, 0%, 0%, 0.9)),
+    url(/TRAINING/html-css-js/image/pexels-jeremy-bishop-dolphin.jpg);
+}
