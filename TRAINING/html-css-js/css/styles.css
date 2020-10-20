@@ -227,10 +227,13 @@ body {
     url(/TRAINING/html-css-js/image/pexels-dolphins.jpg);
     background-size: cover;
     transition: all .5s linear;
+    filter: grayscale(1);
 }
 
-.box-shadow-img:hover {
+.box-shadow-img:hover,
+.box-shadow-img:focus {
     background: url(/TRAINING//html-css-js/image/pexels-dolphins.jpg);
     background-size: cover;
     transform: scale(1.15);
+    filter: grayscale(0);
 }
