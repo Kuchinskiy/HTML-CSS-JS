@@ -1,7 +1,7 @@
 /* DEFAULTS */
 
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     margin: 0;
     padding: 0;
 }
@@ -38,6 +38,12 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+clearfix::after {
+    display: table;
+    content: '';
+    clear: both;
 }
 
 body {
@@ -236,4 +242,12 @@ body {
     background-size: cover;
     transform: scale(1.15);
     filter: grayscale(0);
+}
+
+
+/* MODULE-04 Additional Tasks */
+/* Task-01 */
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
