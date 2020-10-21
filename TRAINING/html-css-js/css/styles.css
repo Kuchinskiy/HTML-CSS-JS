@@ -258,7 +258,7 @@ body {
 }
 
 .navigation-page {
-    padding: 42px 0;
+    padding: 28px 0;
 }
 
 .menu-nav {
@@ -279,5 +279,18 @@ body {
 
 .menu-link-float {
     display: block;
+}
+
+.menu-nav .menu-item-float:not(:last-child) {
+    margin-right: 20px;
+}
+
+.menu-item-float {
+    padding: 30px 31px;
+}
+
+.menu-item-float:hover .menu-link-float,
+.menu-item-float:focus .menu-link-float {
+    color: #200420;
 }
 
