@@ -40,7 +40,7 @@ img {
     height: auto;
 }
 
-clearfix::after {
+.clearfix::after {
     display: table;
     content: '';
     clear: both;
@@ -252,6 +252,15 @@ body {
     margin: 0 auto;
 }
 
+.header-main-float {
+    background-color: #dba542;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navigation-page {
+    padding: 42px 0;
+}
+
 .menu-nav {
     list-style-type: none;
 }
@@ -260,5 +269,15 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 18px;
     color: #008080;
 }
+
+.menu-nav .menu-item-float {
+    float: left;
+}
+
+.menu-link-float {
+    display: block;
+}
+
