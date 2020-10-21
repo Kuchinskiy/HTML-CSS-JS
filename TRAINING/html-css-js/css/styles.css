@@ -251,3 +251,14 @@ body {
     width: 960px;
     margin: 0 auto;
 }
+
+.menu-nav {
+    list-style-type: none;
+}
+
+.menu-item-float .menu-link-float {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #008080;
+}
