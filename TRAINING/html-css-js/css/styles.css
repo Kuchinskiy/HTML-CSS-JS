@@ -1,7 +1,7 @@
 /* DEFAULTS */
 
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     margin: 0;
     padding: 0;
 }
@@ -245,7 +245,7 @@ body {
 }
 
 
-/* MODULE-04 Additional Tasks */
+/* MODULE-04 Additional Tasks FLOAT*/
 /* Task-01 */
 .container {
     width: 960px;
@@ -255,6 +255,7 @@ body {
 .header-main-float {
     background-color: #dba542;
     box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
 }
 
 .navigation-page-float {
@@ -297,5 +298,49 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-/* MODULE-04 Additional Tasks */
+/* MODULE-04 Additional Tasks FLOAT*/
 /* Task-02 */
+.item-cards {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: #0E1116;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.item-cards-list {
+    float: left;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    padding: 41px 0;
+}
+
+/* Выбрать всех детей из коллекции кроме каждого '3n' ребенка */
+.item-cards-list:not(:nth-child(3n)) {
+    margin-right: 105px;
+}
+
+/* Выбрать первых шесть детей из коллекции, остальных не учитывать */
+.item-cards-list:nth-child(-n +6) {
+    margin-bottom: 30px;
+}
+
+.item-cards-list:nth-child(3n -8) {
+    background-color:#88292F;
+}
+
+.item-cards-list:nth-child(3n -7) {
+    background-color: #5DB7DE;
+}
+
+.item-cards-list:nth-child(3n -6) {
+    background-color: #0D5D56;
+}
+
+
+
+
+
+
+
