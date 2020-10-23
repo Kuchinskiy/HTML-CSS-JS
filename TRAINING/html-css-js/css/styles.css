@@ -314,6 +314,7 @@ body {
     height: 100px;
     text-align: center;
     padding: 41px 0;
+    cursor: pointer;
 }
 
 /* Выбрать всех детей из коллекции кроме каждого '3n' ребенка */
