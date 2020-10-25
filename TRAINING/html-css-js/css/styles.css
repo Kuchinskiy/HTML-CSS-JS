@@ -389,7 +389,6 @@ body {
 .article-item::before {
     counter-increment: article-count;
     content: counter(article-count, upper-roman);
-    /* display: inline-block; */
     background-color: #5DB7DE;
     color: #ffffff;
     width: 40px;
