@@ -351,7 +351,28 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+/* MODULE-04 Additional Tasks */
+/* Task-03 */
+ul .list-item {
+    text-transform: uppercase;
+}
 
+.list-item {
+    display: inline-block;
+}
+
+.list-item .link-list {
+    display: block;
+    text-decoration: none;
+}
+
+.list-item:not(:last-child) {
+    margin-right: 27px;
+}
+
+.link-list::before {
+    content: '\2192';
+}
 
 
 
