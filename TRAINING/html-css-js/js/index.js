@@ -345,3 +345,34 @@
 const TAKEOUT = 0;
 const COURIER = 1;
 const POST = 2;
+
+const promptLabel = `Выберите способ доставки: ${TAKEOUT} - самовывоз, ${COURIER} - курьер, ${POST} - почта.`
+let userChoice = prompt(promptLabel);
+let message;
+
+if (userChoice === null) {
+    message = 'Приходите следующий раз!';
+} else {
+    userChoice = Number(userChoice);
+
+    switch (userChoice) {
+        case TAKEOUT:
+            message = 'Приходите забирайте!';
+            break;
+
+        case COURIER:
+            message = 'Вам сегодня доставят!';
+            break;
+
+        case POST:
+            message = 'Доставка будет завтра!';
+            break;
+    
+        default:
+            message = 'Ничего не выбрали,сделайте свой выбор)))';
+            break;
+    }
+}
+
+alert(message);
+
