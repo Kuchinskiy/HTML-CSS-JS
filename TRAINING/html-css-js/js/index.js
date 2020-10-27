@@ -386,22 +386,22 @@ const test = [55, 67, 78, 90, 43];
 // indexOf -  позволяет не только узнать имеется ли такой элемент в массиве, но и получить его ИНДЕКС;
 
 if (test.indexOf(78) !== -1) {
-    console.log('yes');
+    // console.log('yes');
 } else {
-    console.log('no');
+    // console.log('no');
 }
 
-console.log(test.indexOf(78)); // 2 inx number in array
-console.log(test.indexOf(43)); // 4 inx number in array
-console.log(test.indexOf(4)); // -1 absent
+// console.log(test.indexOf(78)); // 2 inx number in array
+// console.log(test.indexOf(43)); // 4 inx number in array
+// console.log(test.indexOf(4)); // -1 absent
 
 // includes - сообщает имеется ли такой элемент в массиве;
 
-if (test.includes(90, 6)) {
-    console.log('Of course');
+if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - это возможность узнать ЗАНИМАЕМУЮ ПОЗИЦИЮ;
+    // console.log('Of course');
 } else {
-    console.log('No!!!');
+    // console.log('No!!!');
 }
 
-console.log(test.includes(90)); // true
-console.log(test.includes(20)); // false
+// console.log(test.includes(90)); // true
+// console.log(test.includes(20)); // false
