@@ -342,37 +342,39 @@
 // console.log(concat);
 /*=================================================================================*/
 
-const TAKEOUT = 0;
-const COURIER = 1;
-const POST = 2;
+// Practice - " if/else & switch "
 
-const promptLabel = `Выберите способ доставки: ${TAKEOUT} - самовывоз, ${COURIER} - курьер, ${POST} - почта.`
-let userChoice = prompt(promptLabel);
-let message;
+// const TAKEOUT = 0;
+// const COURIER = 1;
+// const POST = 2;
 
-if (userChoice === null) {
-    message = 'Приходите следующий раз!';
-} else {
-    userChoice = Number(userChoice);
+// const promptLabel = `Выберите способ доставки: ${TAKEOUT} - самовывоз, ${COURIER} - курьер, ${POST} - почта.`
+// let userChoice = prompt(promptLabel);
+// let message;
 
-    switch (userChoice) {
-        case TAKEOUT:
-            message = 'Приходите забирайте!';
-            break;
+// if (userChoice === null) {
+//     message = 'Приходите следующий раз!';
+// } else {
+//     userChoice = Number(userChoice);
 
-        case COURIER:
-            message = 'Вам сегодня доставят!';
-            break;
+//     switch (userChoice) {
+//         case TAKEOUT:
+//             message = 'Приходите забирайте!';
+//             break;
 
-        case POST:
-            message = 'Доставка будет завтра!';
-            break;
-    
-        default:
-            message = 'Ничего не выбрали,сделайте свой выбор)))';
-            break;
-    }
-}
+//         case COURIER:
+//             message = 'Вам сегодня доставят!';
+//             break;
 
-alert(message);
+//         case POST:
+//             message = 'Доставка будет завтра!';
+//             break;
+
+//         default:
+//             message = 'Ничего не выбрали,сделайте свой выбор)))';
+//             break;
+//     }
+// }
+
+// alert(message);
 
