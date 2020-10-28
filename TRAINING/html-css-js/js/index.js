@@ -406,6 +406,18 @@ if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - эт
 // console.log(test.includes(90)); // true
 // console.log(test.includes(20)); // false
 
-let value = 25;
-value /= 5;
-console.log(value);
+
+// Приведение к числу(Number(val)) и проверка на число(Number.isNaN(val)) ->>> (NaN || not NaN)
+const isNotNaN = '999';
+// console.log(isNotNaN); // "999"
+// console.log(typeof isNotNaN); // string
+
+// console.log(Number(isNotNaN)); // 999
+// console.log(typeof Number(isNotNaN)); // number
+// console.log(Number.isNaN(isNotNaN)); // false - это не NaN
+
+const thisNaN = Number('qwerty');
+console.log(thisNaN); // NaN
+
+console.log(Number.isNaN(thisNaN)); // true - это NaN
+
