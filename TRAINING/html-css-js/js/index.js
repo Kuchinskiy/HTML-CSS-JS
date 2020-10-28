@@ -409,15 +409,14 @@ if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - эт
 
 // Приведение к числу(Number(val)) и проверка на число(Number.isNaN(val)) ->>> (NaN || not NaN)
 const isNotNaN = '999';
-// console.log(isNotNaN); // "999"
+// console.log('До приведения к числу все еще строка:', isNotNaN); // "999"
 // console.log(typeof isNotNaN); // string
 
-// console.log(Number(isNotNaN)); // 999
+// console.log('После приведения к числу:', Number(isNotNaN)); // 999
 // console.log(typeof Number(isNotNaN)); // number
-// console.log(Number.isNaN(isNotNaN)); // false - это не NaN
+// console.log('Число,а не NaN:', Number.isNaN(isNotNaN)); // false - это число,а не NaN;
 
 const thisNaN = Number('qwerty');
-console.log(thisNaN); // NaN
-
-console.log(Number.isNaN(thisNaN)); // true - это NaN
+// console.log('Строка не являеется числом:', thisNaN); // NaN
+// console.log('Это NaN, а не число:', Number.isNaN(thisNaN)); // true - это NaN,а не число;
 
