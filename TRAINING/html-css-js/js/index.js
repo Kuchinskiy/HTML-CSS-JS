@@ -409,6 +409,7 @@ if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - эт
 
 // Приведение к числу(Number(val)) и проверка на число(Number.isNaN(val)) ->>> (NaN || not NaN)
 const isNotNaN = '999';
+const validNumber = Number('999'); // приведение типа строки(string) в число(number), краткая запись;
 // console.log('До приведения к числу все еще строка:', isNotNaN); // "999"
 // console.log(typeof isNotNaN); // string
 
