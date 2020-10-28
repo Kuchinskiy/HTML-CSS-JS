@@ -344,39 +344,39 @@
 
 // Practice - " if/else & switch "
 
-const TAKEOUT = 0;
-const COURIER = 1;
-const POST = 2;
+// const TAKEOUT = 0;
+// const COURIER = 1;
+// const POST = 2;
 
-const promptLabel = `Выберите способ доставки: ${TAKEOUT} - самовывоз, ${COURIER} - курьер, ${POST} - почта.`
-let userChoice = prompt(promptLabel);
-let message;
+// const promptLabel = `Выберите способ доставки: ${TAKEOUT} - самовывоз, ${COURIER} - курьер, ${POST} - почта.`
+// let userChoice = prompt(promptLabel);
+// let message;
 
-if (userChoice === null || userChoice === '') {
-    message = 'Будем рады Вас видеть следующий раз!';
-} else {
-    userChoice = Number(userChoice);
+// if (userChoice === null || userChoice === '') {
+//     message = 'Будем рады Вас видеть следующий раз!';
+// } else {
+//     userChoice = Number(userChoice);
 
-    switch (userChoice) {
-        case TAKEOUT:
-            message = 'Приходите забирайте товар в отделении!';
-            break;
+//     switch (userChoice) {
+//         case TAKEOUT:
+//             message = 'Приходите забирайте товар в отделении!';
+//             break;
 
-        case COURIER:
-            message = 'Вам сегодня будет доставка курьером!';
-            break;
+//         case COURIER:
+//             message = 'Вам сегодня будет доставка курьером!';
+//             break;
 
-        case POST:
-            message = 'Доставка будет завтра!';
-            break;
+//         case POST:
+//             message = 'Доставка будет завтра!';
+//             break;
 
-        default:
-            message = 'Ничего не выбрали,сделайте свой выбор)))';
-            break;
-    }
-}
+//         default:
+//             message = 'Ничего не выбрали,сделайте свой выбор)))';
+//             break;
+//     }
+// }
 
-alert(message);
+// alert(message);
 
 
 // Метод indexOf & includes:
@@ -421,6 +421,3 @@ const thisNaN = Number('qwerty');
 // console.log('Строка не являеется числом:', thisNaN); // NaN
 // console.log('Это NaN, а не число:', Number.isNaN(thisNaN)); // true - это NaN,а не число;
 
-
-// console.log(Math.max(34, 45, 90, 456, 240));
-// console.log(Math.min(34, 45, 9, 456, 240));
