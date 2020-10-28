@@ -359,11 +359,11 @@ if (userChoice === null || userChoice === '') {
 
     switch (userChoice) {
         case TAKEOUT:
-            message = 'Приходите забирайте!';
+            message = 'Приходите забирайте товар в отделении!';
             break;
 
         case COURIER:
-            message = 'Вам сегодня доставят!';
+            message = 'Вам сегодня будет доставка курьером!';
             break;
 
         case POST:
