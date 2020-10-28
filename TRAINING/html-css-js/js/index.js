@@ -421,3 +421,10 @@ const thisNaN = Number('qwerty');
 // console.log('Строка не являеется числом:', thisNaN); // NaN
 // console.log('Это NaN, а не число:', Number.isNaN(thisNaN)); // true - это NaN,а не число;
 
+
+// Шаблонные строки с вложенной ИНТЕРПОЛЯЦИЕЙ с использованием валидного выражения,например,вызов функции:
+const up = (str) => str.toUpperCase();
+let upStr = 'string';
+
+let str = `this is ${up(`${upStr}s`)} in uppercase`;
+// console.log(str);
