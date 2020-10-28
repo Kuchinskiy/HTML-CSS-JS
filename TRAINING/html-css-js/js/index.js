@@ -406,6 +406,6 @@ if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - эт
 // console.log(test.includes(90)); // true
 // console.log(test.includes(20)); // false
 
-const hotelName = prompt('Please enter desired hotel name:');
-console.log(hotelName);
-console.log(typeof hotelName);
+let value = 25;
+value /= 5;
+console.log(value);
