@@ -428,7 +428,8 @@ let str = `this is ${up(`${upStr}s`)} in uppercase`;
 // console.log(str);
 
 
-// !!! -->>> Veriable scope
+// Veriable scope, practice with verification
+
 const global = 'global';
 
 if (true) {
