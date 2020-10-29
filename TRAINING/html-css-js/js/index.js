@@ -378,7 +378,6 @@
 
 // alert(message);
 
-
 // Метод indexOf & includes:
 
 const test = [55, 67, 78, 90, 43];
@@ -386,9 +385,9 @@ const test = [55, 67, 78, 90, 43];
 // indexOf -  позволяет не только узнать имеется ли такой элемент в массиве, но и получить его ИНДЕКС;
 
 if (test.indexOf(78) !== -1) {
-    // console.log('yes');
+  // console.log('yes');
 } else {
-    // console.log('no');
+  // console.log('no');
 }
 
 // console.log(test.indexOf(78)); // 2 inx number in array
@@ -397,15 +396,15 @@ if (test.indexOf(78) !== -1) {
 
 // includes - сообщает имеется ли такой элемент в массиве;
 
-if (test.includes(90, 6)) { // второе число '6...3,4,2 итд' - это возможность узнать ЗАНИМАЕМУЮ ПОЗИЦИЮ;
-    // console.log('Of course');
+if (test.includes(90, 6)) {
+  // второе число '6...3,4,2 итд' - это возможность узнать ЗАНИМАЕМУЮ ПОЗИЦИЮ;
+  // console.log('Of course');
 } else {
-    // console.log('No!!!');
+  // console.log('No!!!');
 }
 
 // console.log(test.includes(90)); // true
 // console.log(test.includes(20)); // false
-
 
 // Приведение к числу(Number(val)) и проверка на число(Number.isNaN(val)) ->>> (NaN || not NaN)
 const isNotNaN = '999';
@@ -421,10 +420,69 @@ const thisNaN = Number('qwerty');
 // console.log('Строка не являеется числом:', thisNaN); // NaN
 // console.log('Это NaN, а не число:', Number.isNaN(thisNaN)); // true - это NaN,а не число;
 
-
 // Шаблонные строки с вложенной ИНТЕРПОЛЯЦИЕЙ с использованием валидного выражения,например,вызов функции:
-const up = (str) => str.toUpperCase();
+const up = str => str.toUpperCase();
 let upStr = 'string';
 
 let str = `this is ${up(`${upStr}s`)} in uppercase`;
 // console.log(str);
+
+
+// !!! -->>> Veriable scope
+const global = 'global';
+
+if (true) {
+    const blockA = 'block A';
+
+// Видим глобальную + локальную A
+    console.log('Global scope:', global); // 'global'
+    console.log('Local scope:', blockA); // block A
+
+/*
+* Переменные blockB и blockC не найдены в доступных областях видимости.
+* Будет ошибка обращения к переменной.
+*/
+    // console.log(blockB); // ReferenceError: blockB is not defined
+    // console.log(blockC); // ReferenceError: blockC is not defined
+
+if (true) {
+    const blockB = 'block B';
+
+    // Видим глобальную + внешнюю A + локальную B
+    console.log('Global scope:', global); // global
+    console.log('Outer scope:', blockA); // block A
+    console.log('Local scope:', blockB); // block B
+
+/*
+* Переменная blockC не найдена в доступных областях видимости.
+* Будет ошибка обращения к переменной.
+*/
+    // console.log(blockC); // ReferenceError: blockC is not defined
+  }
+}
+
+if (true) {
+    const blockC = 'block C';
+
+// Видим глобальную + локальную C
+    console.log('Global scope:', global); // global
+    console.log('Local scope:', blockC); // block C
+
+/*
+* Переменные blockA и blockB не найдены в доступных областях видимости.
+* Будет ошибка обращения к переменной.
+*/
+// console.log(blockA); // ReferenceError: blockA is not defined
+// console.log(blockB); // ReferenceError: blockB is not defined
+}
+
+// Видим только глобальную
+console.log('Global scope:', global); // global
+
+/*
+* Переменные blockA, blockB и blockC не найдены в доступных областях видимости.
+* Будет ошибка обращения к переменной.
+*/
+// console.log(blockA); // ReferenceError: blockA is not defined
+// console.log(blockB); // ReferenceError: blockB is not defined
+// console.log(blockC); // ReferenceError: blockC is not defined
