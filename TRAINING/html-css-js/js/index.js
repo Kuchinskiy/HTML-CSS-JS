@@ -435,8 +435,8 @@ if (true) {
     const blockA = 'block A';
 
 // Видим глобальную + локальную A
-    console.log('Global scope:', global); // 'global'
-    console.log('Local scope:', blockA); // block A
+    // console.log('Global scope:', global); // 'global'
+    // console.log('Local scope:', blockA); // block A
 
 /*
 * Переменные blockB и blockC не найдены в доступных областях видимости.
@@ -449,9 +449,9 @@ if (true) {
     const blockB = 'block B';
 
     // Видим глобальную + внешнюю A + локальную B
-    console.log('Global scope:', global); // global
-    console.log('Outer scope:', blockA); // block A
-    console.log('Local scope:', blockB); // block B
+    // console.log('Global scope:', global); // global
+    // console.log('Outer scope:', blockA); // block A
+    // console.log('Local scope:', blockB); // block B
 
 /*
 * Переменная blockC не найдена в доступных областях видимости.
@@ -465,8 +465,8 @@ if (true) {
     const blockC = 'block C';
 
 // Видим глобальную + локальную C
-    console.log('Global scope:', global); // global
-    console.log('Local scope:', blockC); // block C
+    // console.log('Global scope:', global); // global
+    // console.log('Local scope:', blockC); // block C
 
 /*
 * Переменные blockA и blockB не найдены в доступных областях видимости.
@@ -477,7 +477,7 @@ if (true) {
 }
 
 // Видим только глобальную
-console.log('Global scope:', global); // global
+// console.log('Global scope:', global); // global
 
 /*
 * Переменные blockA, blockB и blockC не найдены в доступных областях видимости.
