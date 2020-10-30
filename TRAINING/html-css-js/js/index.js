@@ -427,26 +427,25 @@ let upStr = 'string';
 let str = `this is ${up(`${upStr}s`)} in uppercase`;
 // console.log(str);
 
-
 // Veriable scope, practice with verification
 
 const global = 'global';
 
 if (true) {
-    const blockA = 'block A';
+  const blockA = 'block A';
 
-// Видим глобальную + локальную A
-    // console.log('Global scope:', global); // 'global'
-    // console.log('Local scope:', blockA); // block A
+  // Видим глобальную + локальную A
+  // console.log('Global scope:', global); // 'global'
+  // console.log('Local scope:', blockA); // block A
 
-/*
-* Переменные blockB и blockC не найдены в доступных областях видимости.
-* Будет ошибка обращения к переменной.
-*/
-    // console.log(blockB); // ReferenceError: blockB is not defined
-    // console.log(blockC); // ReferenceError: blockC is not defined
+  /*
+   * Переменные blockB и blockC не найдены в доступных областях видимости.
+   * Будет ошибка обращения к переменной.
+   */
+  // console.log(blockB); // ReferenceError: blockB is not defined
+  // console.log(blockC); // ReferenceError: blockC is not defined
 
-if (true) {
+  if (true) {
     const blockB = 'block B';
 
     // Видим глобальную + внешнюю A + локальную B
@@ -454,37 +453,62 @@ if (true) {
     // console.log('Outer scope:', blockA); // block A
     // console.log('Local scope:', blockB); // block B
 
-/*
-* Переменная blockC не найдена в доступных областях видимости.
-* Будет ошибка обращения к переменной.
-*/
+    /*
+     * Переменная blockC не найдена в доступных областях видимости.
+     * Будет ошибка обращения к переменной.
+     */
     // console.log(blockC); // ReferenceError: blockC is not defined
   }
 }
 
 if (true) {
-    const blockC = 'block C';
+  const blockC = 'block C';
 
-// Видим глобальную + локальную C
-    // console.log('Global scope:', global); // global
-    // console.log('Local scope:', blockC); // block C
+  // Видим глобальную + локальную C
+  // console.log('Global scope:', global); // global
+  // console.log('Local scope:', blockC); // block C
 
-/*
-* Переменные blockA и blockB не найдены в доступных областях видимости.
-* Будет ошибка обращения к переменной.
-*/
-// console.log(blockA); // ReferenceError: blockA is not defined
-// console.log(blockB); // ReferenceError: blockB is not defined
+  /*
+   * Переменные blockA и blockB не найдены в доступных областях видимости.
+   * Будет ошибка обращения к переменной.
+   */
+  // console.log(blockA); // ReferenceError: blockA is not defined
+  // console.log(blockB); // ReferenceError: blockB is not defined
 }
 
 // Видим только глобальную
 // console.log('Global scope:', global); // global
 
 /*
-* Переменные blockA, blockB и blockC не найдены в доступных областях видимости.
-* Будет ошибка обращения к переменной.
-*/
+ * Переменные blockA, blockB и blockC не найдены в доступных областях видимости.
+ * Будет ошибка обращения к переменной.
+ */
 // console.log(blockA); // ReferenceError: blockA is not defined
 // console.log(blockB); // ReferenceError: blockB is not defined
 // console.log(blockC); // ReferenceError: blockC is not defined
 
+
+// Work of the cycle ('for') analysis of what is happening inside;
+// Работа цикла 'for' разбор происходящего внутри
+const target = 3;
+let sum = 0;
+
+for (let i = 1; i <= target; i += 1) {
+  console.log('sum:', sum);
+
+  sum += i; // statement expression // тело цикла (код);
+
+  console.log(' i :', i);
+}
+
+console.log('total sum:', sum);
+
+// let i = 0 -- переменная-счетчика, проверяется во время выполнения цикла;
+// i <= target -- условие(условное выражение) пока оно "true" выполняется тело цикла;
+/*
+ пост-выражение i += 1 (i = i + 1) -- используется для обновления переменной-счетчика let i = 0,
+ операция инкремента(приращения счетчика) и увеличивает значение в переменной let i на 1;
+*/
+// После выполнения тела цикла в переменной let i = 0 СОХРАНЯЕТСЯ ЗНАЧЕНИЕ -->>> 1;
+// На следующей ИТЕРАЦИИ цикла, переменная-счетчик инициализируется новым значением,
+// увеличивая его еще на единицу и.т.д
