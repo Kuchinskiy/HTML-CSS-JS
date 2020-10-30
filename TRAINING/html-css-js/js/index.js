@@ -487,3 +487,4 @@ if (true) {
 // console.log(blockA); // ReferenceError: blockA is not defined
 // console.log(blockB); // ReferenceError: blockB is not defined
 // console.log(blockC); // ReferenceError: blockC is not defined
+
