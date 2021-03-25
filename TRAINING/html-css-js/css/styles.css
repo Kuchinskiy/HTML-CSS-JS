@@ -367,9 +367,11 @@ body {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+/* ===================================================================================== */
+
 /* MODULE-04 Additional Tasks */
 /* Task-03 */
-.list {
+/* .list {
     text-transform: uppercase;
     list-style-type: none;
 }
@@ -389,11 +391,13 @@ body {
 
 .link-list::before {
     content: '\2192';
-}
+} */
+
+/* ==================================================================================== */
 
 /* MODULE-04 Additional Tasks  'counter-increment & ::before'*/
 /* Task-04 */
-.article-list {
+/* .article-list {
     counter-reset: article-count;
     list-style: none;
 }
@@ -436,7 +440,9 @@ body {
 .article:hover {
     color: #88292F;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 1px 10px rgba(0, 0, 0, 0.22);
-}
+} */
+
+/* ====================================================================================== */
 
 /* MODULE-06 Additional Tasks */
 /* Menu - arbitrary task - FLEXBOX */
@@ -447,33 +453,44 @@ body {
     min-height: 100px;
     margin: 0 auto;
     padding: 0 20px;
-    background-color: orange;
+    background-color: #ffa500;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
     margin: 0;
-    background-color: teal;
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 20px;
+    background-color: #008080;
     text-transform: uppercase;
-    height: 40px;
 }
 
 .menu-item {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 320px;
+    flex-basis: 520px;
+    justify-content: space-around;
 }
 
 .menu-nav-link .menu-link {
-    display: flex;
     text-decoration: none;
+    font-weight: 700;
+    color: #fff;
 }
 
 .menu-nav-link {
     list-style: none;
     text-transform: uppercase;
-    background-color: pink;
+    background-color: #ee7a8d;
+    padding: 15px 20px;
+}
+
+.menu-nav-link:hover,
+.menu-nav-link:focus {
+    background-color: #000;
 }
 
 
