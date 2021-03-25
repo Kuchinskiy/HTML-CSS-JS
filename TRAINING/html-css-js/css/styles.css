@@ -444,7 +444,7 @@ body {
 
 /* ====================================================================================== */
 
-/* MODULE-06 Additional Tasks */
+/* MODULE-06 Additional Tasks + training */
 /* Menu - arbitrary task - FLEXBOX */
 
 .wrapper {
@@ -461,7 +461,6 @@ body {
 .logo {
     margin: 0;
     cursor: pointer;
-    list-style: none;
     padding: 15px 20px;
     background-color: #008080;
     text-transform: uppercase;
