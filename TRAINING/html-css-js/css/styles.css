@@ -51,9 +51,10 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+
 /* MODULE-03 Additional Tasks-1 */
 /* Header - Navigation - Menu */
-.wrapperA {
+/* .wrapperA {
     width: 1200px;
     margin: 0 auto;
 }
@@ -96,11 +97,13 @@ body {
 .menu-item:hover .menu-link,
 .menu-item:focus .menu-link {
     color: #000000;
-}
+} */
+
+/* ===================================================================================== */
 
 /* MODULE-03 Additional Tasks-2 */
 /* Article with IMAGE */
-.wrapperB {
+/* .wrapperB {
     width: 470px;
     margin: 0 auto;
 }
@@ -136,11 +139,13 @@ body {
     color: #928484;
     text-align: justify;
     margin-bottom: 21px;
-}
+} */
+
+/* ===================================================================================== */
 
 /* MODULE-03 Additional Tasks-3 */
 /* Articles with IMAGES */
-.wrapperC {
+/* .wrapperC {
     width: 960px;
     margin: 0 auto;
     font-size: 0;
@@ -157,10 +162,10 @@ body {
 .section-two {
     display: inline-block;
     padding: 35px;
-}
+} */
 
 /* Footer for Article-Page-Images */
-.page-footer {
+/* .page-footer {
     width: 100%;
     background-color: #3a3e64;
     padding: 38px 0;
@@ -177,7 +182,9 @@ body {
 .symbol {
     vertical-align: super;
     font-size: 10px;
-}
+} */
+
+/* ===================================================================================== */
 
 
 /* Box-Shadow the effect - PRACTICE */
@@ -218,6 +225,7 @@ body {
         210px 10px 0 rgb(120%, 60%, 50%);
 }
 
+/* ==================================================================================== */
 
 /* Box-Shadow with Linear-Gradient - IMAGE */
 .box-shadow-img {
@@ -244,10 +252,12 @@ body {
     filter: grayscale(0);
 }
 
+/* ====================================================================================== */
+
 
 /* MODULE-04 Additional Tasks FLOAT*/
 /* Task-01 */
-.container {
+/* .container {
     width: 960px;
     margin: 0 auto;
 }
@@ -296,7 +306,9 @@ body {
     color: #200420;
     background-color: #dc143c;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
+} */
+
+/* ====================================================================================== */
 
 /* MODULE-04 Additional Tasks FLOAT*/
 /* Task-02 */
@@ -450,8 +462,7 @@ body {
 .menu-item {
     display: flex;
     flex-wrap: wrap;
-
-    /* width: 320px; */
+    flex-basis: 320px;
 }
 
 .menu-nav-link .menu-link {
