@@ -2,8 +2,8 @@
 
 * {
     /* outline: 1px solid red; */
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -432,18 +432,40 @@ body {
 .wrapper {
     display: flex;
     width: 1200px;
-    height: 100px;
+    min-height: 100px;
     margin: 0 auto;
+    padding: 0 20px;
+    background-color: orange;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     margin: 0;
     background-color: teal;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+.menu-item {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* width: 320px; */
 }
 
 .menu-nav-link .menu-link {
+    display: flex;
     text-decoration: none;
 }
+
+.menu-nav-link {
+    list-style: none;
+    text-transform: uppercase;
+    background-color: pink;
+}
+
+
 
 
 
