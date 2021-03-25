@@ -428,3 +428,24 @@ body {
 
 /* MODULE-06 Additional Tasks */
 /* Menu - arbitrary task - FLEXBOX */
+
+.wrapper {
+    display: flex;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    background-color: teal;
+}
+
+.menu-nav-link .menu-link {
+    text-decoration: none;
+}
+
+
+
+
+
