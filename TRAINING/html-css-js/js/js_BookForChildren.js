@@ -56,9 +56,9 @@ let equalOrOlderAge = 12;
 let accompanied = true;
 
 if (age >= equalOrOlderAge) {
-    console.log('Welcome');
+    // console.log('Welcome');
 } else if (accompanied) {
-    console.log('Welcome with parents');
+    // console.log('Welcome with parents');
 } else {
-    console.log('STOP');
+    // console.log('STOP');
 }
