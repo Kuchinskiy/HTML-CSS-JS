@@ -513,17 +513,4 @@ console.log('total sum:', sum);
 // На следующей ИТЕРАЦИИ цикла, переменная-счетчик инициализируется новым значением,
 // увеличивая его еще на единицу и.т.д
 
-let age = 10;
-let olderAge = 12;
-let accompanied = true;
-
-
-if (age >= olderAge) {
-  console.log('Welcome');
-} else if (accompanied) {
-  console.log('Welcome with parents');
-} else {
-  console.log('STOP');
-}
-
 
