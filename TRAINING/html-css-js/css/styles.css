@@ -496,6 +496,19 @@ body {
 /* MODULE-06 Additional Tasks */
 /* Gallery with images (main content)*/
 
+.container {
+    min-height: 100vh;
+    width: 900px;
+    margin: 0 auto;
+}
 
+.flexbox-parent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 
