@@ -492,16 +492,18 @@ body {
     background-color: #000;
 }
 
+/* ==================================================================================== */
 
 /* MODULE-06 Additional Tasks */
 /* Gallery with images (main content)*/
+/* Task-01 */
 
-.container {
+/* .container {
     min-height: 100vh;
     width: 900px;
     margin: 0 auto;
     padding: 25px 0;
-}
+} */
 
 .flexbox-parent {
     display: flex;
@@ -520,4 +522,9 @@ body {
     margin-bottom: 40px;
 }
 
+/* ====================================================================================== */
+
+/* MODULE-06 Additional Tasks */
+/* Social media user card */
+/* Task-02 */
 
