@@ -566,7 +566,8 @@ body {
 }
 
 .social-list-image:hover {
-    transform: skewY(5deg);
+    /* transform: skewY(5deg); */
+    transform: rotate(5deg);
 }
 
 .social-list-description {
