@@ -1,5 +1,8 @@
 'use strict';
 
+// GREETING
+const greetingOnDisplay = document.querySelector('.greeting');
+
 /*
 Book: JavaScript for Children (author: Nick Morgan);
 -->>> practice, testing, training - coding <<<--

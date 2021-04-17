@@ -51,6 +51,18 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
+/* GREETING */
+.greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(247, 240, 240);
+    width: 350px;
+    height: 50px;
+    margin: 20px;
+    background-color: rgb(224, 224, 28);
+}
+
 
 /* MODULE-03 Additional Tasks-1 */
 /* Header - Navigation - Menu */
