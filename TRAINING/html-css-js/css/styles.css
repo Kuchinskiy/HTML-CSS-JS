@@ -47,7 +47,7 @@ img {
 }
 
 body {
-    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Roboto', sans-serif;
     font-family: 'Playfair Display', serif;
 }
 
@@ -462,7 +462,7 @@ body {
 /* MODULE-06 Additional Tasks + training */
 /* Menu - arbitrary task - FLEXBOX */
 
-.wrapper {
+/* .wrapper {
     display: flex;
     width: 1200px;
     min-height: 100px;
@@ -471,7 +471,7 @@ body {
     background-color: #ffa500;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .logo {
     margin: 0;
@@ -638,3 +638,50 @@ body {
 }
 
 /* ======================================================================================= */
+
+/* MODULE-07 Additional Tasks */
+/* Task-01 price list on tables */
+.wrapper {
+    width: 460px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%),
+        0 1px 5px 0 rgb(0 0 0 / 12%),
+        0 3px 1px -2px rgb(0 0 0 / 20%);
+}
+
+table {
+    font-family: Roboto, sans-serif;
+    border: 2px solid #000000;
+    margin: auto;
+}
+
+caption {
+    padding: 15px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.collapse {
+    border-collapse: collapse;
+}
+
+th {
+    width: 75%;
+    height: 34px;
+    padding: 12px;
+    font-size: 21px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+td {
+    height: 36px;
+    font-size: 16px;
+    border: 2px solid #2a2a2a;
+}
+
+.text_up {
+    text-transform: uppercase;
+}
