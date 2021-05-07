@@ -577,21 +577,22 @@
 
     <!-- MODULE-07 Additional Tasks -->
     <!-- Task-02  Form -->
-    <div class="wrapper_form">
+    <div class="wrapper">
       <form action="#" method="get">
-        <section class="form_list">
-          <ul>
-            <li>
-              <input type="text" name="name" placeholder="Your Name" required />
+        <section class="form_list_section">
+          <ul class="form_list_item">
+            <li class="form_list">
+              <input class="form_list_input" type="text" name="name" placeholder="Your Name" required />
             </li>
-            <li>
-              <input type="email" name="email" placeholder="Your Email" required/>
+            <li class="form_list">
+              <input class="form_list_input" type="email" name="email" placeholder="Your Email" required/>
             </li>
-            <li>
-              <textarea name="comments" cols="30" rows="10">Your Message</textarea>
+            <li class="form_list">
+              <textarea class="description" name="comments" placeholder="Your Message" cols="52" rows="10"></textarea>
             </li>
           </ul>
         </section>
+        <button class="send_button" type="submit">send</button>
       </form>
     </div>
 
