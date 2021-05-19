@@ -115,9 +115,9 @@ P.S : Добавлять символ в конец строки можно с �
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let randomString = '';
 
-while (randomString.length < 7) {
-    randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
-    // randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
-}
+// while (randomString.length < 7) {
+//     randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+//     randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
+// }
 console.log(`Your random string : ${randomString}!!!`);
 // alert(`Ваши 7 случайных букв : ${randomString} !!!`);
