@@ -112,7 +112,7 @@ P.S : Добавлять символ в конец строки можно с �
 * BOOK page 130-ua,(108 ru)
 */
 
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
+const alphabet = "abcdefghijklmnopqrstuvwxyz";
 let randomString = '';
 
 // while (randomString.length < 7) {
