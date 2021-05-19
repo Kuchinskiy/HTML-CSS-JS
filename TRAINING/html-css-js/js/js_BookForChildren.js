@@ -81,7 +81,7 @@ P.S вам понадобится "переприсвоить" значения 
 красным можно так:
 animals[0] = animals[0] + " - прекрасное животное";
 
-* BOOK page 108 ru
+* BOOK page 130-ua,(108 ru)
 */
 
 let animals = ["Cat", "Fish", "Lemur", "Komodo dragon"];
@@ -90,4 +90,34 @@ for (let i = 0; i < animals.length; i++) {
     // animals[i] = animals[i] + ' - прекрасное животное'; // конкатынация строк
     animals[i] = `${animals[i]} - lovely animal`; // интерполяция и шаблонные строки
 }
-console.log(animals);
+// console.log(animals);
+
+/*
+* Напишите генератор случайных строк. Для этого вам понадо-
+* бится строка со всеми буквами алфавита:
+-->>> "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+-->>> 'abcdefghijklmnopqrstuvwxyz';
+
+* Начните создавать случайную строку с пустой строки
+* (let randomString = ""). Затем добавьте цикл while и при
+* каждом его повторе добавляйте в строку новый случайный
+* символ — до тех пор, пока длина строки randomString не пре-
+* высит шесть символов (или любой другой длины на ваш выбор).
+
+P.S : Добавлять символ в конец строки можно с помощью оператора '+='.
+
+* После того как цикл закончит работу, выведите получившуюся
+* строку в консоль, чтобы полюбоваться на свое творение!
+
+* BOOK page 130-ua,(108 ru)
+*/
+
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let randomString = '';
+
+while (randomString.length < 7) {
+    randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+    // randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
+}
+console.log(`Your random string : ${randomString}!!!`);
+// alert(`Ваши 7 случайных букв : ${randomString} !!!`);
