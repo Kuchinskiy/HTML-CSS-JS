@@ -119,5 +119,64 @@ let randomString = '';
 //     randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
 //     randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
 // }
-console.log(`Your random string : ${randomString}!!!`);
+// console.log(`Your random string : ${randomString}!!!`);
 // alert(`Ваши 7 случайных букв : ${randomString} !!!`);
+
+
+/* 
+const input = 'javascript is awesome';
+let output = '';
+
+* Перебирите все символы исходной строки -->>> 'javascript is awesome' в цикле -->>> 'for',
+* встретив определенные символы добавьте к результирующей строке иные вместо них:
+* -->>> "а" на "4", "е" на "3", "i" на "1" и "о" на "0".
+* В противном случае добавляйте к результату исходный символ.
+
+P.S : для добавления символа в конец строки используйте оператор "+=", 
+необходимо "добавлять к результату" в пустую строку 'output' согласно условиям нужный символ.
+Сделать в цикле обращение к символу строки можно через 'input[i]' и уже согласно условиям 
+сделать замену символа с помощью оператора '+=' :))) Good Luck)
+
+*/
+
+// Вариант - 1 -->>> с добавлением дополнительной переменной
+const input = 'javascript is awesome';
+let output = '';
+
+for (let i = 0; i < input.length; i += 1) {
+
+let outputSign = input[i];
+
+    if (outputSign === 'a') {
+        output += 4;
+    } else if (outputSign === 'e') {
+        output += 3;
+    } else if (outputSign === 'i') {
+        output += 1;
+    } else if (outputSign === 'o') {
+        output += 0;
+    } else {
+        output += outputSign;
+    }
+}
+// console.log(output);
+
+
+// Вариант - 2 -->>> Без дополнительной переменной
+// const inputSign = "javascript is awesome";
+// let outputSign = ""; 
+// for (let i = 0; i < inputSign.length; i += 1) {
+
+//     if (inputSign[i] === "a") {
+//         outputSign += "4";
+//     } else if(inputSign[i] === "e") {
+//         outputSign += "3";
+//     } else if (inputSign[i] === "i") {
+//         outputSign += "1";
+//     } else if (inputSign[i] === "o") {
+//         outputSign += "0";
+//     } else {
+//         outputSign += inputSign[i];
+//     }
+// }
+// console.log(outputSign);
