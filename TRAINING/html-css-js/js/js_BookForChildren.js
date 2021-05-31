@@ -84,9 +84,9 @@ animals[0] = animals[0] + " - прекрасное животное";
 * BOOK page 130-ua,(108 ru)
 */
 
-let animals = ["Cat", "Fish", "Lemur", "Komodo dragon"];
+const animals = ["Cat", "Fish", "Lemur", "Komodo dragon"];
 
-for (let i = 0; i < animals.length; i++) {
+for (let i = 0; i < animals.length; i += 1) {
     // animals[i] = animals[i] + ' - прекрасное животное'; // конкатынация строк
     animals[i] = `${animals[i]} - lovely animal`; // интерполяция и шаблонные строки
 }
