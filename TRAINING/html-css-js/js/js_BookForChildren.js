@@ -180,3 +180,18 @@ let outputSign = input[i];
 //     }
 // }
 // console.log(outputSign);
+
+
+//* Тернарный оператор вместо if...else используется при простых простых операциях
+
+// const likesCats = confirm('Do you like cats?');
+// const yourChoice = likesCats ? console.log('Super!') : console.log('Wrong!');
+
+// * Как вариант который избыточен сам по себе при простой задаче
+// const likesCats = confirm('Do you like cats?');
+// * Излишняя синтаксическая инструкция if...else
+// if (likesCats) {
+//     console.log('Yes!!!');
+// } else {
+//     console.log('No!!!');
+// }
