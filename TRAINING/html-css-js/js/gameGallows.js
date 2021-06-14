@@ -34,3 +34,36 @@
 "Поздравить" игрока с победой - слово угадано.
 */
 
+
+const words = ['ягуар', 'ципленок', 'макака', 'сом', 'слон'];
+const word = words[Math.floor(Math.random() * words.length)];
+
+
+let totalArr = [];
+for (let i = 0; i < word.length; i += 1) {
+    totalArr[i] = '_';
+}
+
+let ramainingLetters = word.length;
+
+while (ramainingLetters > 0) {
+    alert(totalArr.join(' '));
+
+    const guess = prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
+    if (guess === null) {
+        break;
+    } else if (guess.length !== 1) {
+        alert('Введите не больше одной буквы!!!');
+    } else {
+        for (let j = 0; j < word.length; j += 1) {
+            if (word[j] === guess) {
+                totalArr[j] = guess;
+                ramainingLetters -= 1;
+            }
+        }
+    }
+}
+
+alert(totalArr.join(' '));
+alert(`Отлично вы угадали слово : ${word}`);
+
