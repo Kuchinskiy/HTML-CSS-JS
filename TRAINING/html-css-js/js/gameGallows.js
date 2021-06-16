@@ -41,29 +41,39 @@ const word = words[Math.floor(Math.random() * words.length)];
 
 let totalArr = [];
 for (let i = 0; i < word.length; i += 1) {
-    totalArr[i] = '_';
+    totalArr[i] = ' _ ';
 }
 
+/*
+* Переменная(ramainingLetters) в которую записывается(операция присвоение) 
+* длина случайного слова(words -->> word),после чего мы тем самым приравневаем
+* ее к длине загаданного слова.
+
+* В последствии нам эта переменная понадобится для условия в цикле,а также чтобы
+* отслеживать оставшиеся к-во букв для отгадывания и уменшать(декриментировать -=1)
+* значение этой переменной на 1 если такая буква входит в слово.
+*/ 
 let ramainingLetters = word.length;
 
 while (ramainingLetters > 0) {
     alert(totalArr.join(' '));
 
-    const guess = prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
-    if (guess === null) {
-        break;
-    } else if (guess.length !== 1) {
-        alert('Введите не больше одной буквы!!!');
-    } else {
-        for (let j = 0; j < word.length; j += 1) {
-            if (word[j] === guess) {
-                totalArr[j] = guess;
-                ramainingLetters -= 1;
-            }
-        }
-    }
-}
+//     const guess = prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
+//     let counter = 5;
+//     if (guess === null && counter >= 5) {
+//         break;
+//     } else if (guess.length !== 1) {
+//         alert('Введите не больше одной буквы!!!');
+//     } else {
+//         for (let j = 0; j < word.length; j += 1) {
+//             if (word[j].toLowerCase() === guess.toLowerCase()) {
+//                 totalArr[j] = guess.toLowerCase();
+//                 ramainingLetters -= 1;
+//             }
+//         }
+//     }
+// }
 
-alert(totalArr.join(' '));
-alert(`Отлично вы угадали слово : ${word}`);
-
+// alert(totalArr.join(' '));
+// alert(`Отлично вы угадали слово : ${word}`);
+alert('Все попытки израсходованы, попробуйте еще раз!!!');
