@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // Пишем игру "ВИСИЛИЦА"(game 'GALLOWS')
 
@@ -34,46 +34,56 @@
 "Поздравить" игрока с победой - слово угадано.
 */
 
-
 const words = ['ягуар', 'ципленок', 'макака', 'сом', 'слон'];
 const word = words[Math.floor(Math.random() * words.length)];
 
-
 let totalArr = [];
 for (let i = 0; i < word.length; i += 1) {
-    totalArr[i] = ' _ ';
+  totalArr[i] = ' _ ';
 }
 
 /*
 * Переменная(ramainingLetters) в которую записывается(операция присвоение) 
 * длина случайного слова(words -->> word),после чего мы тем самым приравневаем
-* ее к длине загаданного слова.
+* ее к длине загаданного слова, таким образим задаем к-во букв которые надо угадать.
 
 * В последствии нам эта переменная понадобится для условия в цикле,а также чтобы
 * отслеживать оставшиеся к-во букв для отгадывания и уменшать(декриментировать -=1)
 * значение этой переменной на 1 если такая буква входит в слово.
-*/ 
+*/
 let ramainingLetters = word.length;
+let counterOfAttempts = 0;
+const limitOfAttempts = 10;
 
-while (ramainingLetters > 0) {
-    alert(totalArr.join(' '));
+while (ramainingLetters > 0 && counterOfAttempts <= limitOfAttempts) {
+  alert(totalArr.join(' '));
 
-//     const guess = prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
-//     let counter = 5;
-//     if (guess === null && counter >= 5) {
-//         break;
-//     } else if (guess.length !== 1) {
-//         alert('Введите не больше одной буквы!!!');
-//     } else {
-//         for (let j = 0; j < word.length; j += 1) {
-//             if (word[j].toLowerCase() === guess.toLowerCase()) {
-//                 totalArr[j] = guess.toLowerCase();
-//                 ramainingLetters -= 1;
-//             }
-//         }
-//     }
-// }
+  const guess = prompt(
+    'Угадайте букву, или нажмите Отмена для выхода из игры :',
+  );
+  if (guess === null) {
+    break;
+  } else if (guess.length !== 1) {
+    alert('Введите не больше одной буквы!!!');
+  } else {
+    counterOfAttempts += 1;
+    for (let j = 0; j < word.length; j += 1) {
+      if (totalArr[j] === guess) {
+        alert('Такая буква уже была, введите другую...');
+        break;
+      }
 
-// alert(totalArr.join(' '));
-// alert(`Отлично вы угадали слово : ${word}`);
-alert('Все попытки израсходованы, попробуйте еще раз!!!');
+      if (word[j].toLowerCase() === guess.toLowerCase()) {
+        totalArr[j] = guess.toLowerCase();
+        ramainingLetters -= 1;
+      }
+    }
+  }
+}
+
+if (ramainingLetters === 0) {
+    alert(
+    `Вы угадали все ${word.length} буквы словом было :  -->>> ${totalArr.join(
+        ' ',)} <<<-- и у вас осталось еще ${counterOfAttempts} попыток)`,
+    );
+}
