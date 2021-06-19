@@ -54,17 +54,17 @@ let accompanied = true;
 * BOOK: page 45-ua(47-ru)
 */
 
-let age = 11;
-let equalOrOlderAge = 12;
-let accompanied = true;
+//let age = 11;
+//let equalOrOlderAge = 12;
+//let accompanied = true;
 
-if (age >= equalOrOlderAge) {
-    // console.log('Welcome');
-} else if (accompanied) {
-    // console.log('Welcome with parents');
-} else {
-    // console.log('STOP');
-}
+//if (age >= equalOrOlderAge) {
+//	console.log('Welcome');
+//} else if (accompanied) {
+//	console.log('Welcome with parents');
+//} else {
+//	console.log('STOP');
+//}
 
 /*
 * Напишите цикл for, который изменяет массив животных, делая
@@ -84,11 +84,11 @@ animals[0] = animals[0] + " - прекрасное животное";
 * BOOK page 130-ua,(108 ru)
 */
 
-const animals = ["Cat", "Fish", "Lemur", "Komodo dragon"];
+const animals = ['Cat', 'Fish', 'Lemur', 'Komodo dragon'];
 
 for (let i = 0; i < animals.length; i += 1) {
-    // animals[i] = animals[i] + ' - прекрасное животное'; // конкатынация строк
-    animals[i] = `${animals[i]} - lovely animal`; // интерполяция и шаблонные строки
+  // animals[i] = animals[i] + ' - прекрасное животное'; // конкатынация строк
+  animals[i] = `${animals[i]} - lovely animal`; // интерполяция и шаблонные строки
 }
 // console.log(animals);
 
@@ -112,16 +112,15 @@ P.S : Добавлять символ в конец строки можно с �
 * BOOK page 130-ua,(108 ru)
 */
 
-const alphabet = "abcdefghijklmnopqrstuvwxyz";
-let randomString = '';
+//const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//let randomString = '';
 
-// while (randomString.length < 7) {
-//     randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
-//     randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
-// }
-// console.log(`Your random string : ${randomString}!!!`);
-// alert(`Ваши 7 случайных букв : ${randomString} !!!`);
-
+//while (randomString.length < 7) {
+//	  randomString += alphabet[Math.floor(Math.random() * alphabet.length)];
+//	  randomString = randomString + alphabet[Math.floor(Math.random() * alphabet.length)];
+//}
+//console.log(`Your random string : ${randomString}!!!`);
+//alert(`Ваши 7 случайных букв : ${randomString} !!!`);
 
 /* 
 const input = 'javascript is awesome';
@@ -140,58 +139,56 @@ P.S : для добавления символа в конец строки ис
 */
 
 // Вариант - 1 -->>> с добавлением дополнительной переменной
-const input = 'javascript is awesome';
-let output = '';
+//const input = 'javascript is awesome';
+//let output = '';
 
-for (let i = 0; i < input.length; i += 1) {
+//for (let i = 0; i < input.length; i += 1) {
 
-let outputSign = input[i];
+//let outputSign = input[i];
 
-    if (outputSign === 'a') {
-        output += 4;
-    } else if (outputSign === 'e') {
-        output += 3;
-    } else if (outputSign === 'i') {
-        output += 1;
-    } else if (outputSign === 'o') {
-        output += 0;
-    } else {
-        output += outputSign;
-    }
-}
-// console.log(output);
-
+//	if (outputSign === 'a') {
+//		output += 4;
+//	} else if (outputSign === 'e') {
+//		output += 3;
+//	} else if (outputSign === 'i') {
+//		output += 1;
+//	} else if (outputSign === 'o') {
+//		output += 0;
+//	} else {
+//		output += outputSign;
+//	}
+//}
+//console.log(output);
 
 // Вариант - 2 -->>> Без дополнительной переменной
-// const inputSign = "javascript is awesome";
-// let outputSign = ""; 
-// for (let i = 0; i < inputSign.length; i += 1) {
+//const inputSign = "javascript is awesome";
+//let outputSign = "";
+//for (let i = 0; i < inputSign.length; i += 1) {
 
-//     if (inputSign[i] === "a") {
-//         outputSign += "4";
-//     } else if(inputSign[i] === "e") {
-//         outputSign += "3";
-//     } else if (inputSign[i] === "i") {
-//         outputSign += "1";
-//     } else if (inputSign[i] === "o") {
-//         outputSign += "0";
-//     } else {
-//         outputSign += inputSign[i];
-//     }
-// }
-// console.log(outputSign);
-
+//	  if (inputSign[i] === "a") {
+//			outputSign += "4";
+//	  } else if(inputSign[i] === "e") {
+//			outputSign += "3";
+//	  } else if (inputSign[i] === "i") {
+//			outputSign += "1";
+//	  } else if (inputSign[i] === "o") {
+//			outputSign += "0";
+//	  } else {
+//			outputSign += inputSign[i];
+//	}
+//}
+//console.log(outputSign);
 
 //* Тернарный оператор вместо if...else используется при простых простых операциях
 
-// const likesCats = confirm('Do you like cats?');
-// const yourChoice = likesCats ? console.log('Super!') : console.log('Wrong!');
+//const likesCats = confirm('Do you like cats?');
+//const yourChoice = likesCats ? console.log('Super!') : console.log('Wrong!');
 
-// * Как вариант который избыточен сам по себе при простой задаче
-// const likesCats = confirm('Do you like cats?');
-// * Излишняя синтаксическая инструкция if...else
+//* Как вариант 'code' который избыточен сам по себе при простой задаче
+//const likesCats = confirm('Do you like cats?');
+//* Излишняя синтаксическая инструкция if...else
 // if (likesCats) {
-//     console.log('Yes!!!');
+//	console.log('Yes!!!');
 // } else {
-//     console.log('No!!!');
-// }
+//	console.log('No!!!');
+//}

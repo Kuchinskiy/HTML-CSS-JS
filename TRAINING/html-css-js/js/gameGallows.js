@@ -22,15 +22,15 @@
 
 "Выбрать" случайное слово
 "До тех пор,пока" слово не угадано {
-    "Показать" игроку текущее состояние игры
-    "Запросить" у игрока вариант ответа
-    "Если" игрок хочет выйти из игры {
-        "Выйти" из игры
-        "Иначе, если" такая буква есть в слове {
-            "Обновить" состояние игры, подставив новую букву
-        }
-    }
-}
+		"Показать" игроку текущее состояние игры
+		"Запросить" у игрока вариант ответа
+		"Если" игрок хочет выйти из игры {
+				"Выйти" из игры
+				"Иначе, если" такая буква есть в слове {
+						"Обновить" состояние игры, подставив новую букву
+				}
+		}
+} 
 "Поздравить" игрока с победой - слово угадано.
 */
 
@@ -39,7 +39,7 @@ const word = words[Math.floor(Math.random() * words.length)];
 
 let totalArr = [];
 for (let i = 0; i < word.length; i += 1) {
-  totalArr[i] = ' _ ';
+	totalArr[i] = ' _ ';
 }
 
 /*
@@ -56,34 +56,34 @@ let counterOfAttempts = 0;
 const limitOfAttempts = 10;
 
 while (ramainingLetters > 0 && counterOfAttempts <= limitOfAttempts) {
-  alert(totalArr.join(' '));
+	alert(totalArr.join(' '));
 
-  const guess = prompt(
-    'Угадайте букву, или нажмите Отмена для выхода из игры :',
-  );
-  if (guess === null) {
-    break;
-  } else if (guess.length !== 1) {
-    alert('Введите не больше одной буквы!!!');
-  } else {
-    counterOfAttempts += 1;
-    for (let j = 0; j < word.length; j += 1) {
-      if (totalArr[j] === guess) {
-        alert('Такая буква уже была, введите другую...');
-        break;
-      }
+	const guess = prompt(
+		'Угадайте букву, или нажмите Отмена для выхода из игры :',
+	);
+	if (guess === null) {
+		break;
+	} else if (guess.length !== 1) {
+		alert('Введите не больше одной буквы!!!');
+	} else {
+		counterOfAttempts += 1;
+		for (let j = 0; j < word.length; j += 1) {
+			if (totalArr[j] === guess) {
+				alert('Такая буква уже была, введите другую...');
+				break;
+			}
 
-      if (word[j].toLowerCase() === guess.toLowerCase()) {
-        totalArr[j] = guess.toLowerCase();
-        ramainingLetters -= 1;
-      }
-    }
-  }
+			if (word[j].toLowerCase() === guess.toLowerCase()) {
+				totalArr[j] = guess.toLowerCase();
+				ramainingLetters -= 1;
+			}
+		}
+	}
 }
 
 if (ramainingLetters === 0) {
-    alert(
-    `Вы угадали все ${word.length} буквы словом было :  -->>> ${totalArr.join(
-        ' ',)} <<<-- и у вас осталось еще ${counterOfAttempts} попыток)`,
-    );
+		alert(
+		`Вы угадали все ${word.length} буквы словом было :  -->>> ${totalArr.join(
+				' ',)} <<<-- и у вас осталось еще ${counterOfAttempts} попыток)`,
+		);
 }
