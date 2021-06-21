@@ -192,3 +192,53 @@ P.S : для добавления символа в конец строки ис
 // } else {
 //	console.log('No!!!');
 //}
+
+
+/*
+* 	FUNCTION -->>> Функции
+*/
+
+//* Блочная(Block Scope) область видимости и вызов функции
+//* в глобальной(Global Scoupe) области видимости:
+
+// !Через 'Function Expression' у нас это получиться!!!
+// let showMessage;
+
+// if (2 > 1) {
+// 	showMessage = function () {
+// 	console.log('Сообщение, юхууу ;)');
+// 	}
+// }
+// showMessage(); //Результат: 'Сообщение, юхууу ;)'
+
+// !Через 'Function Declaration' у нас это НЕ получиться!!!
+// if (2 > 1) {
+// 	function showMessage () {
+// 	console.log('Сообщение, юхууу ;)');
+// 	}
+// }
+// showMessage(); // ReferenceError: showMessage is not defined
+
+
+// Применение функций
+
+// Каждая из функций должна выполнять ОДНО ДЕЙСТВИЕ, вызвать мы всегда
+// сможем их как по отдельности (возможно другом месте кода), так и через одну
+// ФУНКЦИЮ которая будет объединяющей для нескольких(пример):
+
+// Функция соединения строк
+function createMessage (text, name) {
+	return `${text}, ${name}`;
+}
+
+// Функция вывода в консоль
+function showMessage (message) {
+	console.log(message);
+}
+
+// Объединяющая функция, вызывает обе функции
+function initMessage (text, name) {
+	showMessage(createMessage(text, name));
+}
+
+initMessage('Hello', 'GogolBordello');
