@@ -241,4 +241,18 @@ function initMessage (text, name) {
 	showMessage(createMessage(text, name));
 }
 
-initMessage('Hello', 'GogolBordello');
+// initMessage('Hello', 'GogolBordello');
+
+// =========================================================
+
+// Chapter 8 -->>> Function
+
+// Многократное повторение одного и того же кода без необходимости дуюлирования(копирования)
+const randomWords = ["Planet", "Worm", "Flower", "Computer"];
+
+const pickRandomWord = function (words) {
+	words = words[Math.floor(Math.random() * words.length)];
+	return words;
+	};
+
+	pickRandomWord(randomWords);
