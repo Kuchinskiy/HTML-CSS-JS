@@ -278,12 +278,48 @@ const multiply = function (multiplier, value) {
 	return multiplier * value;
 };
 
-console.log(`Функция множитель: ${multiply(36325, 9824)}`); // 356 856 800
+// console.log(`Функция множитель: ${multiply(36325, 9824)}`); // 356 856 800
 
 
 const add = function (x, y) {
 	return x + y;
 };
 
-console.log(`Функция складывания: ${add(356856800, 777)}`); // 356 857 577
+// console.log(`Функция складывания: ${add(356856800, 777)}`); // 356 857 577
 
+// =========================================================
+
+/*
+#2. Совпадают ли массивы?
+
+*Напишите функцию areArraysSame, которая принимает два
+*массива с числами в качестве аргументов.
+*Она должна возвращать true, если эти массивы одинаковые (то есть содержат одни
+*и те же числа в одном и том же порядке), или false, если массивы различаются.
+
+Для проверки правильности работы функции запустите такой код:
+areArraysSame([1, 2, 3], [4, 5, 6]); //false
+areArraysSame([1, 2, 3], [1, 2, 3]); // true
+areArraysSame([1, 2, 3], [1, 2, 3, 4]); //false
+
+*/
+
+const areArraysSame = function (arrOne, arrTwo) {
+
+	if (arrOne.length !== arrTwo.length) {
+		return false;
+	}
+	
+	for (let i = 0; i < areArraysSame.length; i += 1) {
+		if (arrOne[i] === arrTwo[i]) {
+			return true;
+		}
+	}
+	return false;
+};
+
+console.log(areArraysSame([1, 2, 3], [4, 5, 6]));
+console.log(areArraysSame([1, 2, 3], [1, 2, 3]));
+console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4]));
+
+// =========================================================
