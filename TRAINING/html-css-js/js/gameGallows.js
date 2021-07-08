@@ -34,26 +34,26 @@
 "Поздравить" игрока с победой - слово угадано.
 */
 
-const words = ['ягуар', 'ципленок', 'макака', 'сом', 'слон'];
 // Возвращает случайно выбранное слово
 const pickWord = function () {
+	const words = [
+		'ягуар',
+		'ципленок',
+		'макака',
+		'сом',
+		'слон'];
+
 	return words[Math.floor(Math.random() * words.length)];
 };
 
-const word = pickWord(); // word: загаданное слово записываем в переменную
-console.log(word);
-// answerArray: итоговый массив
-let answerArray = [];
-// Возвращает итоговый массив для заданного слова word
+// Возвращает answerArray: итоговый массив для заданного слова word
 const setupAnswerArray = function (word) {
+	let answerArray = [];
 	for (let i = 0; i < word.length; i += 1) {
 		answerArray[i] = ' _ ';
 	}
 	return answerArray;
 };
-
-answerArray = setupAnswerArray(word); // итоговый массив с прилетевшим элементом с fn(pickWord)
-console.log(answerArray);
 
 /*
 * Переменная(ramainingLetters) в которую записывается(операция присвоение) 
@@ -73,46 +73,64 @@ const showPlayerProgress = function (answerArray) {
 
 // Запрашивает ответ игрока с помощью prompt
 const getGuess = function () {
-	prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
+	return prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
 };
 // getGuess(prompt);
 
 
+const updateGameState = function (guess, word, answerArray) {
+	let appearances = 0;
+	for (let j = 0; j < word.length; j += 1) {
+		if (word[j].toLowerCase() === guess.toLowerCase()) {
+			answerArray[j] = guess.toLowerCase();
+			appearances += 1;
+		}
+
+		if (answerArray[j] === guess[j]) {
+			alert('Такая буква уже была, введите другую...');
+			break;
+		}
+	}
+	return appearances;
+};
+
+const showAnswerAndCongratulatePlayer = function (answerArray) {
+	showPlayerProgress(answerArray);
+
+	if (ramainingLetters === 0) {
+		alert(
+		`Вы угадали все ${word.length} букв, словом было :  -->>> ${answerArray.join(
+				' ',)} <<<-- у вас осталось еще ${counterOfAttempts} неиспользованых попыток)`,
+		);
+	}
+};
+
+// word: загаданное слово записываем в переменную
+const word = pickWord();
+// итоговый массив с прилетевшим элементом с fn(pickWord)
+const answerArray = setupAnswerArray(word);
 // remainingLetters: сколько букв осталось угадать
 let ramainingLetters = word.length;
 // Счетчик ограничивающий количество попыток для отгадывания
 let counterOfAttempts = 0;
 const limitOfAttempts = 10;
 
-// while (ramainingLetters > 0 && counterOfAttempts <= limitOfAttempts) {
-// 	alert(totalArr.join(' '));
+while (ramainingLetters > 0 && counterOfAttempts <= limitOfAttempts) {
+	showPlayerProgress(answerArray);
 
-// 	const guess = prompt(
-// 		'Угадайте букву, или нажмите Отмена для выхода из игры :',
-// 	);
-// 	if (guess === null) {
-// 		break;
-// 	} else if (guess.length !== 1) {
-// 		alert('Введите не больше одной буквы!!!');
-// 	} else {
-// 		counterOfAttempts += 1;
-// 		for (let j = 0; j < word.length; j += 1) {
-// 			if (totalArr[j] === guess) {
-// 				alert('Такая буква уже была, введите другую...');
-// 				break;
-// 			}
+	const guess = getGuess();
 
-// 			if (word[j].toLowerCase() === guess.toLowerCase()) {
-// 				totalArr[j] = guess.toLowerCase();
-// 				ramainingLetters -= 1;
-// 			}
-// 		}
-// 	}
-// }
+	if (guess === null) {
+		break;
+	} else if (guess.length !== 1) {
+		alert('Введите не больше одной буквы!!!');
+	} else {
+		counterOfAttempts += 1;
+		const correctGuesses = updateGameState(guess, word, answerArray);
+		ramainingLetters -= correctGuesses;
+	}
+}
 
-// if (ramainingLetters === 0) {
-// 		alert(
-// 		`Вы угадали все ${word.length} буквы словом было :  -->>> ${totalArr.join(
-// 				' ',)} <<<-- и у вас осталось еще ${counterOfAttempts} попыток)`,
-// 		);
-// }
+showAnswerAndCongratulatePlayer(answerArray);
+
+
