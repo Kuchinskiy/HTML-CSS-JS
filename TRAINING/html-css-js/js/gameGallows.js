@@ -75,9 +75,11 @@ const showPlayerProgress = function (answerArray) {
 const getGuess = function () {
 	return prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
 };
-// getGuess(prompt);
 
-
+// Обновляет answerArray согласно ответу игрока (guess)
+// возвращает число, обозначающее, сколько раз буква guess
+// встречается в слове, чтобы можно было обновить значение
+// remainingLetters
 const updateGameState = function (guess, word, answerArray) {
 	let appearances = 0;
 	for (let j = 0; j < word.length; j += 1) {
@@ -85,22 +87,18 @@ const updateGameState = function (guess, word, answerArray) {
 			answerArray[j] = guess.toLowerCase();
 			appearances += 1;
 		}
-
-		if (answerArray[j] === guess[j]) {
-			alert('Такая буква уже была, введите другую...');
-			break;
-		}
 	}
 	return appearances;
 };
 
+// Показывает игроку отгаданое слово целиком и поздравляет с победой
 const showAnswerAndCongratulatePlayer = function (answerArray) {
 	showPlayerProgress(answerArray);
 
 	if (ramainingLetters === 0) {
 		alert(
 		`Вы угадали все ${word.length} букв, словом было :  -->>> ${answerArray.join(
-				' ',)} <<<-- у вас осталось еще ${counterOfAttempts} неиспользованых попыток)`,
+				' ',)} <<<-- у вас осталось еще ${counterOfAttempts} неиспользованых попыток.Good job;)))`,
 		);
 	}
 };
@@ -126,11 +124,15 @@ while (ramainingLetters > 0 && counterOfAttempts <= limitOfAttempts) {
 		alert('Введите не больше одной буквы!!!');
 	} else {
 		counterOfAttempts += 1;
+		for (let k = 0; k < word.length; k += 1) {
+			if (answerArray[k] === guess) {
+				alert('Такая буква уже была, введите другую...');
+				break;
+			}
+		}
 		const correctGuesses = updateGameState(guess, word, answerArray);
 		ramainingLetters -= correctGuesses;
 	}
 }
 
 showAnswerAndCongratulatePlayer(answerArray);
-
-
