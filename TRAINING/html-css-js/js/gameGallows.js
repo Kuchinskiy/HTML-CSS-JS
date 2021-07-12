@@ -71,7 +71,7 @@ const showPlayerProgress = function (answerArray) {
 	alert(answerArray.join(' '));
 };
 
-// Запрашивает ответ игрока с помощью prompt
+// Запрашивает ответ игрока с помощью prompt и его возвращает
 const getGuess = function () {
 	return prompt('Угадайте букву, или нажмите Отмена для выхода из игры :');
 };

@@ -323,3 +323,11 @@ console.log(areArraysSame([1, 2, 3], [1, 2, 3]));
 console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4]));
 
 // =========================================================
+
+// Chapter 9 DOM & jQuery
+
+const headingElement = document.getElementById('main-heading');
+console.log(headingElement.innerHTML);
+// let newHeadingText = prompt('Введите новый заголовок:');
+// headingElement.innerHTML = newHeadingText;
+// console.log(newHeadingText);
