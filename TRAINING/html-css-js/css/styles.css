@@ -53,7 +53,7 @@ body {
 }
 
 /* GREETING */
-.greeting {
+.greeting, #main-heading {
     display: flex;
     justify-content: center;
     align-items: center;
