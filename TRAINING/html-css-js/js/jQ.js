@@ -39,4 +39,4 @@ function yourHobby() {
 // $('#main-heading').fadeOut(3000);
 
 // Цепной вызов и анимация на jQuery, изменяя текст заголовка и включая его затухание
-$('h2').text('Этот текст скоро исчезнет)').fadeOut(3000);
+$('h2').text('This will fade out)').fadeOut(3000);
