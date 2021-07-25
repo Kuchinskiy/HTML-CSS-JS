@@ -15,12 +15,22 @@ console.log(headingElement.innerHTML);
 // const newHeadingText = prompt('Введите новый заголовок:');
 // $('#main-heading').text(newHeadingText);
 
-// Добавляем в дерево новый DOM-элемент, через метод 'append'
+// Добавляем в HTML-дерево новый DOM-элемент, через метод 'append'
+// Переданная ему строка '<p>Это новый параграф</p>' преобразуется в DOM-элемент
 // $('body').append('<p>Это новый параграф</p>');
 
 // Используем метод 'append' в цикле 'for' для добавления нескольких элементов
 // for (let i = 0; i < 3; i += 1) {
 // 	const hobby =prompt('Назови одно из своих хобби!');
-// 	$('body').append("<p>" + hobby + "</p>");
+	// $('body').append("<p>" + hobby + "</p>");
 // }
 
+// Также это возможно через функцию
+function yourHobby() {
+	for (let i = 0; i < 3; i += 1) {
+		const hobby =prompt('Назови одно из своих хобби!');
+		$('body').append(`"<p>" ${hobby} "</p>"`);
+	}
+}
+
+// yourHobby();
