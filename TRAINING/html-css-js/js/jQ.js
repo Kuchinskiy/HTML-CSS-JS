@@ -70,7 +70,7 @@ function showAnimation() {
 
 
 const roles = ['guest', 'manager', 'affiliate'];
-// const userRole = 'guest';
-if (roles.includes(userRole)) {
-	console.log('Welcome');
-}
+const userRole = 'guest';
+const userVisitor	= roles.includes(userRole) ? console.log('Welcome') : console.log('Stop');
+
+
