@@ -69,3 +69,8 @@ function showAnimation() {
 // showAnimation();
 
 
+const roles = ['guest', 'manager', 'affiliate'];
+// const userRole = 'guest';
+if (roles.includes(userRole)) {
+	console.log('Welcome');
+}
