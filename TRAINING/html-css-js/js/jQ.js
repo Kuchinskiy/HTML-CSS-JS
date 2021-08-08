@@ -68,9 +68,7 @@ function showAnimation() {
 
 // showAnimation();
 
+// Exercises
 
-const roles = ['guest', 'manager', 'affiliate'];
-const userRole = 'guest';
-const userVisitor	= roles.includes(userRole) ? console.log('Welcome') : console.log('Stop');
 
 
