@@ -251,11 +251,10 @@ function initMessage (text, name) {
 const randomWords = ["Planet", "Worm", "Flower", "Computer"];
 
 const pickRandomWord = function (words) {
-	words = words[Math.floor(Math.random() * words.length)];
-	return words;
-	};
+	return words[Math.floor(Math.random() * words.length)];
+};
 
-	pickRandomWord(randomWords);
+// console.log(pickRandomWord(randomWords));
 
 // =========================================================
 
@@ -318,16 +317,8 @@ const areArraysSame = function (arrOne, arrTwo) {
 	return false;
 };
 
-console.log(areArraysSame([1, 2, 3], [4, 5, 6]));
-console.log(areArraysSame([1, 2, 3], [1, 2, 3]));
-console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4]));
+// console.log(areArraysSame([1, 2, 3], [4, 5, 6])); // false
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3])); // true
+// console.log(areArraysSame([1, 2, 3], [1, 2, 3, 4])); // false
 
 // =========================================================
-
-// Chapter 9 DOM & jQuery
-
-const headingElement = document.getElementById('main-heading');
-console.log(headingElement.innerHTML);
-// let newHeadingText = prompt('Введите новый заголовок:');
-// headingElement.innerHTML = newHeadingText;
-// console.log(newHeadingText);

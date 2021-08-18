@@ -68,7 +68,9 @@ function showAnimation() {
 
 // showAnimation();
 
-// Exercises
+
+// Exercises - tasks:
+
 
 
 
