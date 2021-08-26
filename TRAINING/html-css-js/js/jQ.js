@@ -4,7 +4,7 @@
 
 // Используем встроеные в браузер(ы) методы DOM для работы с узлами древовидной структурой
 const headingElement = document.getElementById('main-heading');
-console.log(headingElement.innerHTML);
+// console.log(headingElement.innerHTML);
 
 // const newHeadingText = prompt('Введите новый заголовок:');
 // headingElement.innerHTML = newHeadingText;
@@ -29,7 +29,7 @@ console.log(headingElement.innerHTML);
 function yourHobby() {
 	for (let i = 0; i < 3; i += 1) {
 		const hobby =prompt('Назови одно из своих хобби!');
-		$('body').append(`"<p>" ${hobby} "</p>"`);
+		$('body').append(`<p> ${hobby} </p>`);
 	}
 }
 
@@ -90,20 +90,40 @@ function showAnimation() {
 
 const nameFriends = ['Jhon', 'Carl', 'Mahmud'];
 
-for (let i = 0; i < nameFriends.length; i += 1) {
-	$('body').append(`<p>${nameFriends[i]}, "лучший!"</p>`);
-	$("p").last().hide().fadeIn((i + 1) * 5000);
-}
+// for (let i = 0; i < nameFriends.length; i += 1) {
+// 	$('body').append(`<p>${nameFriends[i]}, "лучший!"</p>`);
+// 	$("p").last().hide().fadeIn((i + 1) * 5000);
+// }
+
 
 const newHeadingText = 'My Friends';
-$('#main-heading').text(newHeadingText);
+// $('#main-heading').text(newHeadingText);
 
 
 // Task-02-jQuery DOM
 // #2 Мигающий заголовок
+/*
+Как с помощью fadeOut и fadeIn сделать так, чтобы заголовок
+мигнул пять раз с интервалом в секунду? Как сделать это в цикле
+for? А теперь измените цикл, чтобы заголовок появлялся
+и исчезал в первый раз за секунду, потом за две, потом за три
+и т. д.
+*/
 
-// for (let i = 0; i < 1000; i += 1) {
-// 	$('#main-heading').fadeOut(2000).fadeIn(2000);
+let fadeTime;
+
+// for (let i = 0; i < 5; i += 1) {
+// 	fadeTime = (i + 1) * 1000;
+// 	$('#main-heading').fadeOut(fadeTime / 2).fadeIn(fadeTime / 2);
 // }
 
+
+// Task-03-jQuery DOM
+// #3 Отложенная анимация
+/*
+Для задержки анимации можно воспользоваться методом delay.
+С помощью delay, fadeOut и fadeIn заставьте какой-нибудь
+элемент плавно исчезнуть, а затем, через пять секунд, снова
+проявиться.
+*/
 
