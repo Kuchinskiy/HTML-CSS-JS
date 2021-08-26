@@ -91,8 +91,9 @@ hide и метод fadeIn, чтобы имена плавно возникали
 const nameFriends = ['Jhon', 'Carl', 'Mahmud'];
 
 for (let i = 0; i < nameFriends.length; i += 1) {
-	$('body').append(`<p>${nameFriends[i]}</p>`);
+	$('body').append(`<p>${nameFriends[i]}, "лучший!"</p>`);
 }
+
 
 // for (let i = 0; i < nameFriends.length; i += 1) {
 // 	$('p')
