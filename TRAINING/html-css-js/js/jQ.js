@@ -79,28 +79,31 @@ function showAnimation() {
 эти элементы в конец <body>,вызывая jQuery-метод append.
 
 С помощью jQuery измените текст элемента h1, чтобы вместо
-"Привет, мир!" там было "Мои друзья".Используйте метод
-hide и метод fadeIn, чтобы имена плавно возникали на экране.
+"Привет, мир!" там было "Мои друзья".
 
 Теперь измените созданные вами элементы p, добавив после
 каждого имени слово "лучший!". Подсказка: если найти сразу
 все элементы p с помощью $("p"), метод append можно вызвать
-для них всех разом.
+для них всех разом.Используйте метод hide и метод fadeIn, 
+чтобы имена плавно возникали на экране.
 */
 
 const nameFriends = ['Jhon', 'Carl', 'Mahmud'];
 
 for (let i = 0; i < nameFriends.length; i += 1) {
 	$('body').append(`<p>${nameFriends[i]}, "лучший!"</p>`);
+	$("p").last().hide().fadeIn((i + 1) * 5000);
 }
 
-
-// for (let i = 0; i < nameFriends.length; i += 1) {
-// 	$('p')
-// }
+const newHeadingText = 'My Friends';
+$('#main-heading').text(newHeadingText);
 
 
 // Task-02-jQuery DOM
+// #2 Мигающий заголовок
 
+// for (let i = 0; i < 1000; i += 1) {
+// 	$('#main-heading').fadeOut(2000).fadeIn(2000);
+// }
 
 
