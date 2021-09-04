@@ -92,12 +92,21 @@ const nameFriends = ['Jhon', 'Carl', 'Mahmud'];
 
 // for (let i = 0; i < nameFriends.length; i += 1) {
 // 	$('body').append(`<p>${nameFriends[i]}, "лучший!"</p>`);
+
+// // последовательно-плавное появление всех элементов за 'n'(ое) время
 // 	$("p").last().hide().fadeIn((i + 1) * 5000);
+
+// // появление каждого элемента с задержкой в 'n'(ое) к-во времени
+//    $("p").last().hide().delay((i + 1) * 5000).fadeIn(2000);
 // }
 
 
 const newHeadingText = 'My Friends';
 // $('#main-heading').text(newHeadingText);
+
+// for (let i = 0; i < 5; i += 1) {
+// 	$('span').text(newHeadingText).fadeOut(3000).fadeIn(2000);
+// }
 
 
 // Task-02-jQuery DOM
@@ -127,3 +136,6 @@ let fadeTime;
 проявиться.
 */
 
+// for (let i = 0; i < 3; i += 1) {
+// 	$('.greeting').fadeOut(3000).delay(5000).fadeIn(2000);
+// }
