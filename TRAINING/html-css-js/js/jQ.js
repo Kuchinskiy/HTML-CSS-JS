@@ -155,3 +155,4 @@ let fadeTime;
 */
 
 // $("h1").fadeTo(2000, 0.5); // opacity element
+console.log('test');
